@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="55b0986d-827c-4643-b825-606baeeb22d2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/about/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/contact/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/portfolio/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/footer/Footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/header/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/header/Logo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/header/Nav.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/portfolio/AnimateLogo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/portfolio/Project.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/home.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/nav.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/portfolios.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/socials-medias.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/AnimationLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/MainLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/oleh-bilostotskyi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/DE/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/DE/image-original-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/DE/image_original-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/DE/image_original-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/DE/image_original-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/DE/image_original-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/DE/image_original-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/DE/image_original-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/DE/image_original-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/DE/image_original-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/DE/image_original-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/DE/image_original-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/DE/image_original.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/DE/video.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/DamkaSestems/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Luminova/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Luminova/image_original1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Luminova/image_original2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Luminova/image_original3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Luminova/image_original4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Luminova/image_original5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Luminova/image_original6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Luminova/video.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/MNTN/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/MNTN/image_original.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/MNTN/image_original1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/MNTN/image_original2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/MNTN/image_original4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/MNTN/image_original5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/MNTN/image_original6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/MNTN/image_original7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/MNTN/image_original8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/MNTN/image_original9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/MNTN/video.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/POS/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Planto/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Planto/image_original.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Planto/image_original2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Planto/image_original3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Planto/image_original4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Planto/image_original5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Planto/image_original6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Planto/image_original7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Planto/image_original9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Planto/video.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Positive/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Positive/video.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Renova/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Renova/image_original.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Renova/image_original11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Renova/image_original12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Renova/image_original2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Renova/image_original3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Renova/image_original4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Renova/image_original5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Renova/image_original6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Renova/image_original7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Renova/image_original8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Renova/image_original9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/Renova/video.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/SoCalLiving/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/SoCalLiving/image_original.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/SoCalLiving/image_original1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/SoCalLiving/image_original2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/SoCalLiving/image_original3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/SoCalLiving/image_original4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/SoCalLiving/image_original5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/SoCalLiving/image_original6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/SoCalLiving/video.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/T2D/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/T2D/video.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/VP/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/portfolio/VP/video.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/socials-medias/git.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/socials-medias/linkedin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/globals.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/nav.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/portfolio.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/app/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/About.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Contact.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Experience.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Hero.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NeonBackground.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProjectCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Projects.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/projects.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/globe.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/window.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;OlehWhite&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/OlehWhite/my-portfolio.git&quot;,
+    &quot;accountId&quot;: &quot;2cab6dd1-b784-49bc-9071-ff55a7936cf4&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="31vW1jXK5WXg3DzErgHL7GmP244" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "last_opened_file_path": "/Users/olehbilostotskyi/Desktop/portfolio",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/olehbilostotskyi/Desktop/portfolio/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/Users/olehbilostotskyi/Desktop/portfolio/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/portfolio/POS" />
+      <recent name="$PROJECT_DIR$/public/portfolio/DamkaSestems" />
+      <recent name="$PROJECT_DIR$/public/portfolio/Positive" />
+      <recent name="$PROJECT_DIR$/public/portfolio/T2D" />
+      <recent name="$PROJECT_DIR$/public/portfolio/MNTN" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.26927.40" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55b0986d-827c-4643-b825-606baeeb22d2" name="Changes" comment="" />
+      <created>1756404813397</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756404813397</updated>
+      <workItem from="1756404814520" duration="2456000" />
+      <workItem from="1756452960796" duration="2000" />
+      <workItem from="1759149023659" duration="28215000" />
+      <workItem from="1759305890470" duration="643000" />
+      <workItem from="1759340012417" duration="10876000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

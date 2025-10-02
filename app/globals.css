@@ -1,0 +1,27 @@
+@tailwind utilities;
+
+html {
+    height: 100%;
+    background: linear-gradient(
+            1deg,
+            rgba(0, 166, 255, 1) 0%,
+            rgba(0, 136, 208, 1) 0%,
+            rgba(0, 84, 128, 1) 19%,
+            rgba(0, 41, 79, 1) 37%,
+            rgba(0, 0, 0, 1) 66%
+    );
+    background-attachment: fixed; /* ось тут магія */
+    background-size: cover; /* щоб покрити весь екран */
+}
+
+body {
+    padding: 40px 0 0 0;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+
