@@ -1,0 +1,553 @@
+import { IPortfolio } from "@/types/portfolio.types";
+
+export const PORTFOLIO: IPortfolio[] = [
+  {
+    id: "digitalessentials",
+    specialization: 'Nuxt',
+    image: "/portfolio/DE/1.png",
+    video: "/portfolio/DE/video.mp4",
+    link: "https://digitalessentials.co.uk/",
+    title: "Website DE - with SEO-Optimized SSR with Nuxt.js | Vue | Mailgun",
+    shortDescription: [
+      "⏱ Duration: 2–3 weeks",
+      "1️⃣ Planning (Days 1–3): Optimized UI/UX, defined breakpoints & animation plan, planned CMS",
+      "2️⃣ Development (Days 4–14): SSR with Next.js, pixel-perfect responsive layouts with Tailwind, GSAP animations, Swiper sliders, Mailgun setup",
+      "3️⃣ Testing (Days 15–18): Cross-browser/device tests, performance tweaks, WCAG compliance, security upgrades",
+      "4️⃣ Deployment (Days 19–21): Production build, docs, final QA",
+      "💡 Outcome: Fast, secure, scalable, SEO-friendly site with smooth animations and content management"
+    ],
+    skills: ["Nuxt.js", "Tailwind CSS", "Web Development", "Mailgun", "GSAP"],
+    description: [
+      "⏱ Duration: ~2–3 weeks",
+      "🛠 Tech Stack: Next.js, Tailwind CSS, GSAP, Swiper.js, Mailgun, Google Analytics 4",
+      "1️⃣ Planning & Preparation (Days 1–3)",
+      "Reviewed and optimized existing UI/UX design for better usability and conversion.",
+      "Defined responsive breakpoints and animation strategy.",
+      "Planned CMS structure for scalable content management.",
+      "2️⃣ Development Phase (Days 4–14)",
+      "SSR Implementation: Built the site on Next.js with server-side rendering for fast load times and improved SEO.",
+      "Responsive Layouts: Developed pixel-perfect pages using Tailwind CSS.",
+      "Animations: Added smooth, performance-friendly animations with GSAP and interactive sliders via Swiper.js.",
+      "CMS Integration: Connected a headless CMS for easy content updates.",
+      "Statistics tracking: Google Analytics 4.",
+      "Email Functionality: Integrated Mailgun for contact form submissions.",
+      "3️⃣ Testing & Optimization (Days 15–18)",
+      "Cross-browser and cross-device testing (Chrome, Safari, Firefox, Edge, iOS, Android).",
+      "Performance optimization (lazy loading, code splitting, asset compression).",
+      "Accessibility checks (WCAG standards).",
+      "Security improvements (secure headers, form validation).",
+      "4️⃣ Deployment & Handover (Days 19–21)",
+      "Deployed production-ready build.",
+      "Provided full documentation for client team.",
+      "Final review and QA to ensure flawless user experience.",
+      "💡 Result:",
+      "A secure, scalable, and lightning-fast website with top-tier performance scores, smooth animations, and easy-to-manage content — fully optimized for SEO and responsive on all devices."
+    ]
+  },
+  {
+    id: "luminova",
+    specialization: "Webflow",
+    image: "/portfolio/Luminova/10.png",
+    video: "/portfolio/Luminova/video.mp4",
+    link: "https://luminova-d93874.webflow.io/",
+    title: "Figma to Webflow Website with CMS & Smooth Scroll Animations",
+    shortDescription: [
+      // "Goal: Create a modern, visually engaging website for a lighting solutions brand to showcase services and portfolio.",
+      "Process: Figma → Webflow → Responsive adjustments → Testing → Launch",
+      "Timeframe: ~5 days",
+      "Features:",
+      "Responsive design across desktop, tablet, and mobile",
+      "Smooth scroll interactions and clean section transitions",
+      "Optimized images for fast load speed",
+      "SEO-friendly structure with proper headings and meta setup",
+      "👉 Send me an invite to your project — I’ll help you bring your vision to life in Webflow."
+    ],
+    skills: ["Webflow", "HTML", "CSS", "CMS Development", "UI Animation"],
+    description: [
+      "Goal: Design and develop a modern, visually engaging website for Luminova, a company specializing in premium lighting solutions. The main task was to translate the brand’s creative direction into a fully responsive Webflow site that could both showcase their services and inspire trust through a polished digital presence.",
+      "Process:",
+      "Research & Planning – studied references and defined the brand tone: bold, premium, and experience-driven.",
+      "Figma to Webflow – translated provided design concepts into a fully functional Webflow build.",
+      "Responsive Development – adjusted layouts for desktop, tablet, and mobile devices, ensuring consistent look and feel.",
+      "Interactions & Animations – integrated scroll-based animations and smooth transitions to strengthen the storytelling.",
+      "CMS Setup – implemented a flexible CMS structure for the gallery and services, allowing future scalability.",
+      "Testing & Optimization – tested across multiple devices and browsers, improved load speed, and applied SEO-friendly practices.",
+      "Timeframe: ~ 5 days from start to delivery.",
+      "Features:",
+      "Pixel-perfect implementation of Figma design in Webflow.",
+      "Fully responsive layouts across all breakpoints.",
+      "Smooth scroll animations and subtle interactions.",
+      "CMS-powered gallery to easily add or edit projects.",
+      "Optimized assets for faster performance and better SEO ranking.",
+      "Structured content hierarchy for readability and accessibility.",
+      "Result: The final website delivers the promised “WOW factor” of the brand — strong visuals, a clean layout, and smooth navigation. It positions Luminova as a forward-thinking company in the lighting industry while providing their marketing team with a flexible, easy-to-manage platform for ongoing updates.",
+      "👉 If you’re looking for a Webflow expert to bring your designs to life with the same level of detail and precision — send me an invite, and let’s get started."
+    ]
+  },
+  {
+    id: "visual-property",
+    specialization: "Nuxt",
+    image: "/portfolio/VP/8.png",
+    video: "/portfolio/VP/video.mp4",
+    link: "https://visualproperty.co.uk/",
+    title: "Development Homepage Redesign (Nuxt + Tailwind)",
+    shortDescription: [
+      "🎯 Goal: Create a modern and clear homepage for Visual Property, highlighting key features: property analytics, interactive maps, and company information.",
+      "🛠 Implementation: Built homepage blocks using Nuxt, Vue, HTML, Tailwind; interactive sections with smooth open/close; smooth scrolling; fully responsive for desktop, tablet, and mobile; semantic structure for SEO.",
+      "🚀 Result: Polished, user-friendly page, intuitive for exploring key features, scalable for future updates.",
+      "⏱ Time: 8 hours for layout + 3 hours for responsive adaptation.",
+      "👉 Next Step:Send me an invitation or accept my offer!"
+    ],
+    skills: [
+      "Nuxt.js",
+      "HTML5",
+      "Tailwind CSS",
+      "TypeScript",
+      "Adaptive Web Design"
+    ],
+    description: [
+      "🎯 Goal: Implement a clean, modern homepage layout for Visual Property, enhancing clarity and usability while highlighting key features like property insights, interactive maps, and company information. The client wanted a homepage that explains their platform, showcases functionality, and improves user engagement.",
+      "🛠 Implementation:",
+      "Developed all homepage blocks using Nuxt, Vue, HTML, Tailwind CSS.",
+      "Added interactive section with smooth open/close functionality for detailed content.",
+      "Implemented smooth scrolling to anchored sections and subtle animations for transitions.",
+      "Fully responsive layout for desktop, tablet, and mobile.",
+      "Built semantic HTML structure with header, footer, main sections for clarity and SEO readiness.",
+      "🚀 Result: Delivered a polished homepage that effectively communicates Visual Property’s mission and platform features. The interactive section allows users to explore key insights intuitively. The design is scalable for future updates or additional sections.",
+      "⏱ Timeline: Completed efficiently within a structured workflow.",
+      "👉 Need a similar project that can be quickly implemented on Nuxt, Vue, React, Next, or Webflow? Send me an invitation or select my offer — I will be happy to create it for you."
+    ]
+  },
+  {
+    id: "renova-new",
+    specialization: "Webflow",
+    image: "/portfolio/Renova/9.png",
+    video: "/portfolio/Renova/video.mp4",
+    link: "https://renova-new.webflow.io/",
+    title: "Webflow Project: Website Redesign & Landing Page Design",
+    shortDescription: [
+      "Project: Landing Page Redesign in Webflow",
+      "Goal: Modernize the company’s landing page with a clean, responsive design.",
+      "Process: Research → Wireframing → Development → Testing → Launch.",
+      "Timeframe: ~2 weeks from start to delivery.",
+      "Features: Smooth animations, SEO-friendly structure, fast load speed, and an easy-to-edit Webflow CMS.",
+      "Result: A modern landing page that improves user engagement and highlights services clearly.",
+      "👉 Send me an invite to your project — let’s bring your ideas to life!"
+    ],
+    skills: [
+      "Webflow",
+      "HTML5",
+      "CSS 3",
+      "JavaScript",
+      "Slider Plugin"
+    ],
+    description: [
+      "Project Overview",
+      "The goal of this project was to redesign and modernize a company’s landing page using Webflow.",
+      "The main focus was on creating a clean, responsive, and visually engaging design that highlights services, builds trust with visitors, and drives conversions.",
+
+      "Work Process",
+      "Research & Discovery – analyzed the client’s current website, competitors, and market trends.",
+      "Wireframing & UI Design – created layouts and visuals with a focus on user-friendly navigation and modern aesthetics.",
+      "Webflow Development – built a responsive website in Webflow, implementing animations, smooth scrolling, and reusable components.",
+      "Testing & Optimization – ensured cross-browser compatibility, mobile responsiveness, and fast load times.",
+      "Final Delivery – handed over a ready-to-use live landing page with easy editing capabilities for the client.",
+
+      "Timeframe",
+      "The entire project took 2 weeks from initial planning to launch.",
+
+      "Features Implemented",
+      "Responsive desktop, tablet, and mobile layouts",
+      "Interactive animations for smooth user experience",
+      "SEO-friendly structure with optimized headings and meta tags",
+      "Integrated contact form and call-to-action buttons",
+      "Modern typography and color system to reflect the brand’s identity",
+
+      "Outcome",
+      "The redesigned landing page not only improved the visual appeal but also increased user engagement and clarity of information.",
+      "It made it easier for visitors to understand the company’s services and take action."
+    ]
+  },
+  {
+    id: "planto",
+    specialization: "Webflow",
+    image: "/portfolio/Planto/7.png",
+    video: "/portfolio/Planto/video.mp4",
+    link: "https://planto-dot.webflow.io/",
+    title: "Website from Figma to Webflow with CMS, animations, slider",
+    shortDescription: [
+      "A stylish and responsive website about flowers, built with Webflow CMS and smooth scroll animations in just 5 days.",
+
+      "Dynamic pages for each flower",
+      "CMS collections for flowers & testimonials",
+      "SEO-ready semantic structure",
+      "Scalable for e-commerce & blog integration",
+
+      "✨ Fully responsive on desktop, tablet, and mobile.",
+      "⚡ Clean, lightweight structure with fast loading speed.",
+      "🌱 Ready for future growth: online store, blog, articles.",
+
+      "🚀 Need a similar Webflow project delivered fast? Send me an invite or select my proposal — I’ll be glad to build it for you."
+    ],
+    skills: [
+      "Webflow",
+      "CMS Development",
+      "JavaScript",
+      "HTML5",
+      "CSS 3"
+    ],
+    description: [
+      "🎯 Goal",
+      "Build a modern and elegant website about flowers for people passionate about plants. The main objective was to combine a clean design with smooth animations and dynamic content management using Webflow CMS. The site was designed with scalability in mind — ready for future features like e-commerce, a blog, and educational articles.",
+
+      "🛠 Implementation",
+      "1. Webflow + CMS — set up collections for flowers and testimonials. Each flower has its own dynamic page with images and descriptions.",
+      "2. Scroll animations — smooth element transitions on scroll for a modern and interactive feel.",
+      "3. UI/UX — developed based on the provided design mockup, ensuring balance between aesthetics and usability.",
+      "4. SEO-ready structure — semantic HTML tags (header, nav, main, section, footer, a), optimized meta structure, and alt attributes.",
+      "5. Responsive design — optimized for mobile, tablet, and desktop.",
+      "6. Native Webflow components — forms and sliders implemented without third-party tools to keep the project lightweight.",
+
+      "🚀 Result",
+      "Delivered a stylish, responsive, and functional website that can easily be expanded in the future. The next development steps include integrating e-commerce for online flower sales, adding a blog, and creating a knowledge section with plant care tips.",
+
+      "If you’re looking for a Webflow expert to bring your idea to life, feel free to send me an invite — I’d be glad to discuss your project."
+    ]
+  },
+  {
+    id: "socal-living",
+    specialization: "Next",
+    image: "/portfolio/SoCalLiving/2.png",
+    video: "/portfolio/SoCalLiving/video.mp4",
+    link: "https://planto-dot.webflow.io/",
+    title: "Landing Page Development from Figma — Next.js & TypeScript",
+    shortDescription: [
+      "⏱ Duration: 20 hours (including edits & content changes)",
+      "🛠 Tech Stack: Next.js, Tailwind CSS, TypeScript, Mailgun",
+
+      "Process:",
+      "1. Developed a responsive landing page based on Figma design.",
+      "2. Applied mobile-first approach for faster loading on mobile/tablet.",
+      "3. Implemented SEO best practices for maximum visibility.",
+      "4. Ensured accessibility compliance (WCAG).",
+      "5. Integrated form submission via Mailgun to send directly to client’s email.",
+
+      "💡 Outcome:",
+      "A high-performance, SEO-optimized, and accessible landing page with smooth mobile experience and reliable contact form delivery."
+    ],
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Web Development",
+      "Mailgun"
+    ],
+    description: [
+      "⏱ Duration: 20 hours (including edits & content updates)",
+      "🛠 Tech Stack: Next.js, Tailwind CSS, TypeScript, Mailgun, Swiper",
+
+      "Process:",
+      "1. Pixel-Perfect Development: Fully recreated the designer’s Figma layout with precise attention to detail. Added a smooth page-load animation and implemented a Swiper.js slider for interactive content navigation.",
+      "2. Mobile-First Approach: Built layouts starting from mobile to desktop, ensuring perfect rendering across devices. Optimized images separately for desktop, tablet, and mobile for faster load times.",
+      "3. SEO Excellence: Configured meta tags, headings hierarchy, alt attributes, and other best practices, achieving 100% score in SEO audits.",
+      "4. Accessibility Compliance (WCAG): Used semantic HTML tags, proper labels, and structure to ensure usability for people with disabilities.",
+      "5. Form Integration: Connected the contact form to Mailgun with client-side validation for error handling and success messages.",
+      "6. Performance Optimization: Applied responsive image loading, lazy loading for non-critical assets, and ensured lightweight, fast-loading pages without sacrificing quality.",
+
+      "💡 Outcome:",
+      "A high-performance, SEO-optimized, and accessible landing page that delivers a smooth mobile experience, fast load times, and reliable form submissions — fully aligned with the client’s vision and business goals.",
+
+      "📩 Let’s work together: Interested in fast, high-quality web development? Send me an invite on Upwork, or contact me to request an invite, and let’s start your project!"
+    ]
+  },
+  {
+    id: "mntn",
+    specialization: "Webflow",
+    image: "/portfolio/MNTN/3.png",
+    video: "/portfolio/MNTN/video.mp4",
+    link: "https://mntn-f5c343.webflow.io/",
+    title: "Webflow Website with Scroll Animations & CMS Integration",
+    shortDescription: [
+      "Develop a responsive Webflow website with animations.",
+      "Add scroll and hover animations.",
+      "Deadline: 7 days.",
+      "Stages:",
+      "1. Intro call with the client.",
+      "2. Review materials & get Webflow access.",
+      "3. Design first page + feedback.",
+      "4. Layout for phone, tablet, desktop.",
+      "5. Integrate smooth scroll & hover effects.",
+      "6. Final feedback.",
+      "This business card website features a modern hero section with immersive visuals, responsive layouts for all devices, and animations that bring the design to life.",
+      "— Want a similar project on Webflow? Write to me and let’s discuss your idea."
+    ],
+    skills: [
+      "Webflow",
+      "CSS 3",
+      "HTML5",
+      "JavaScript",
+      "Web Design"
+    ],
+    description: [
+      "⏱ Duration: 7 days",
+      "🛠 Tech Stack: Webflow, Custom Scroll & Hover Animations",
+
+      "Project Overview: Developed a fully responsive business card website on Webflow, focusing on delivering a seamless user experience across all devices.",
+
+      "Process:",
+      "Gained access to existing assets and Webflow workspace to align development with client’s brand and vision.",
+      "Converted the Figma design into pixel-perfect Webflow layouts, prioritizing responsiveness for mobile, tablet, and desktop devices.",
+      "Crafted smooth, performance-optimized scroll and hover animations using Webflow’s native interactions and custom tweaks to enhance user engagement without compromising load speed.",
+      "Iterated based on client feedback, ensuring consistent visual quality and flawless interaction across browsers and devices.",
+      "Deployed the project, ensuring full functionality, SEO readiness, and optimal performance. Provided documentation for client’s ease of future updates.",
+
+      "Technical Highlights: Utilized Webflow’s native animation tools combined with custom scroll-triggered animations to create a dynamic, engaging browsing experience.",
+      "Ensured pixel-perfect responsiveness using Webflow’s breakpoints and custom CSS tweaks.",
+
+      "💡 Outcome: A sleek, fast-loading business card website that not only looks stunning but also offers an intuitive and engaging user experience across all devices — proving that Webflow can handle sophisticated animations and responsive design without sacrificing performance.",
+
+      "📩 Interested in a similar Webflow project? Let’s connect and bring your ideas to life with smooth animations and cutting-edge design."
+    ]
+  },
+  {
+    id: "tap-2-dine",
+    specialization: "Next",
+    image: "/portfolio/T2D/11.png",
+    video: "/portfolio/T2D/video.mp4",
+    link: "https://www.tap2dine.com/",
+    title: "SEO Website Dev: Figma to Next.js | TS | TailwindCSS",
+    shortDescription: ["⏱ Duration: 2 weeks",
+      "🛠 Tech Stack: Next.js, Tailwind CSS, TypeScript, Swiper.js, Mailgun",
+
+      "Work Stages:",
+      "Analyzed design and project requirements",
+      "Developed fully responsive layouts for desktop, tablet, and mobile",
+      "Integrated smooth Swiper.js carousels for product showcase",
+      "Implemented Mailgun-powered contact form with validation",
+      "Applied full SEO optimization for maximum search visibility",
+      "Conducted testing, performance tuning, and cross-device checks",
+
+      "📩 Interested in a similar project? Send me an invite on Upwork to start our collaboration."
+    ],
+    skills: [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "REST API",
+      "Web Development"
+
+    ],
+    description: [
+      "Technologies Used: Next.js, Tailwind CSS, TypeScript, Swiper.js, Mailgun",
+      "Time Spent: 2 weeks",
+
+      "Project Description:",
+      "Tap2Dine is a business card-style website designed for potential franchisees interested in expanding their restaurant or café businesses. The site serves as a comprehensive introduction to Tap2Dine's self-ordering kiosk solutions, highlighting features such as speed, accuracy, automation, and upselling capabilities. It provides a seamless user experience with clear calls to action, enabling visitors to easily get in touch and learn more about the product.",
+
+      "Key Features:",
+      "Responsive Design: The website is fully responsive, ensuring optimal viewing across various devices, including desktops, tablets, and smartphones.",
+      "SEO Optimization: Implemented best practices for SEO to enhance visibility on search engines, ensuring potential franchisees can easily find the website.",
+      "Interactive Elements: Integrated Swiper.js for smooth image carousels, enhancing user engagement and showcasing product features effectively.",
+      "Contact Form Integration: Utilized Mailgun for reliable form submissions, allowing prospective clients to reach out directly through the website.",
+
+      "Outcome:",
+      "The project was completed within the specified timeframe, delivering a professional, user-friendly, and SEO-optimized website that effectively communicates Tap2Dine's value proposition to potential franchisees.",
+
+      "Call to action:",
+      "Interested in creating a similar high-performance website? Let's work together to bring your idea to life. Send me an invite to discuss your project requirements and how we can work together to achieve your goals."
+    ]
+  },
+  {
+    id: "positiveresetservices",
+    specialization: "Next",
+    image: "/portfolio/Positive/4.png",
+    video: "/portfolio/Positive/video.mp4",
+    link: "https://www.tap2dine.com/",
+    title: "SEO Website Dev: Figma to Next.js | TS | TailwindCSS",
+    shortDescription: [
+      "⏱ Duration: 6+ weeks",
+      "🛠 Tech Stack: Next.js, React, TypeScript, Material UI, Firebase, REST API",
+
+      "Work Stages:",
+      "Developed responsive landing page with multilingual toggle and GA4",
+      "Integrated FormSpree contact form for reliable submissions",
+      "Built custom admin panel with Firebase auth for managing blogs, doctors, images, and text",
+      "Enabled real-time content updates via REST API",
+      "Ensured SEO optimization, fast performance, and cross-browser compatibility",
+      "Conducted thorough testing and provided ongoing support",
+
+      "📩 Interested in a similar project? Send me an invite on Upwork to collaborate."
+    ],
+    skills: [
+      "Next.js",
+      "Firebase",
+      "CSS 3",
+      "REST API",
+      "HTML5"
+    ],
+    description: [
+      "Project Overview",
+      "This is a website for a clinic that supports people with mental health challenges. The project was divided into two main parts: the public-facing website and a custom admin panel where the client can manage all site content.",
+
+      "Technologies",
+      "Website: Next.js, TypeScript, Material UI, REST API",
+      "Admin Panel: React, TypeScript, Firebase (for authentication), Material UI, REST API",
+
+      "Development Stages",
+      "1. Landing Page Development (3+ weeks):",
+      "Built the landing page based on the design mockups using Next.js and Material UI for consistent styling.",
+      "Implemented multilingual support that can be toggled on or off directly from the admin panel.",
+      "Integrated Google Analytics 4 for tracking user behavior and gathering insights.",
+      "Connected a contact form via FormSpree to ensure reliable form submissions to the client.",
+      "Optimized site performance for fast loading and cross-browser compatibility.",
+
+      "2. Custom Admin Panel Development (3+ weeks):",
+      "Developed secure authentication using Firebase to control admin access.",
+      "Created comprehensive content management functionality, including:",
+      "Adding, editing, and deleting blogs, doctors, images, and text content.",
+      "Managing multilingual content with easy language toggling.",
+      "Integrated REST API to enable real-time communication between the admin panel and the website.",
+      "Designed a user-friendly interface with Material UI to streamline content management tasks.",
+
+      "3. Testing & Support:",
+      "Conducted thorough testing of all features to ensure a bug-free and smooth user experience.",
+      "Provided ongoing support and maintenance post-launch, promptly addressing client requests and updates.",
+
+      "Outcome",
+      "Delivered a modern, multilingual, and fully manageable clinic website paired with a powerful custom admin panel. The client can easily update content, add news, manage languages, and monitor user engagement through analytics, all without developer assistance."
+    ]
+  },
+  {
+    id: "damka-systems",
+    specialization: 'React',
+    image: "/portfolio/DamkaSestems/6.png",
+    video: "",
+    link: "",
+    title: "SaaS Multi-Platform Restaurant Management – Admin Panel",
+    shortDescription: [
+      "🕒 Frontend dev time: 2 years",
+      "🛠 Tech: React, MUI, Zustand, i18next, Axios, Sentry.",
+
+      "1. Multi-role access: admin, super admin, cashier, manager",
+      "2. Manage businesses, locations, staff schedules & roles",
+      "3. Full menu customization: logo, colors, banners, categories, translations",
+      "4. Order tracking & payment status monitoring",
+      "5. Reporting & analytics (Facebook Pixel, custom reports)",
+      "6. Integrations with KDS/POS, API sync & offline mode",
+
+      "📩 Looking for a similar SaaS project? Message or invite me on Upwork."
+    ],
+    skills: [
+      "React",
+      "Material UI",
+      "Redux",
+      "REST API",
+      "TypeScript"
+    ],
+    description: [
+      "A robust multi-role administration platform designed for managing the entire Kiosk & Portal ecosystem. The panel supports multiple roles (Super Admin, Admin, Manager, Cashier) and allows clients to manage their business hierarchy — from multiple businesses to specific locations, staff, and work schedules.",
+
+      "Key features include:",
+
+      "Customization: Logo, brand colors, banners, menus, categories, items, translations (EN, AR, HE, RU).",
+      "Menu Management: Add/edit items, photos, descriptions, allergens, and attach categories to specific locations.",
+      "Order Management: Real-time order tracking with filtering by status, date, and payment method.",
+      "Payments & Reports: Multi-payment method tracking (cash, card, split, etc.) with detailed reports and Facebook Pixel analytics integration.",
+      "Integrations: KDS (Kitchen Display System), POS, and API sync between Admin Panel, Kiosk, and Portal.",
+      "Location & Staff Management: Add kiosks, manage delivery points, configure payment types, working hours, and days.",
+      "Security & Reliability: User activity logging, 2FA, offline support, and real-time monitoring via Sentry.",
+
+      "📆 Development time: 2 years",
+      "🛠 Technologies: React, Material UI, Google Maps API, React Hook Form, i18next, Zustand, Axios, Sentry.",
+
+      "💬 If you’re looking for a highly customizable, multi-location restaurant SaaS solution, send me a message or invite me on Upwork."
+    ]
+  },
+  {
+    id: "pos",
+    specialization: "React",
+    image: "/portfolio/POS/5.png",
+    video: "",
+    link: "",
+    title: "POS Restaurant SaaS – Web, Mobile & Self-Service Kiosk Ordering System",
+    shortDescription: [
+      "Tech: React, MUI, Google Maps, Zustand, Axios, i18next.",
+      "Timeline: 2 years.",
+
+      "Phase 1 – Architecture: Designed multi-tenant SaaS for restaurants with customizable UI, menu & branding.",
+      "Phase 2 – Kiosk: Built self-service system with Cash Machine, Cibus, TenBis, Goodi, Pele Card & Apple/Google Pay integrations.",
+      "Phase 3 – Portal: Web/mobile ordering with delivery, pickup, scheduling & QR login.",
+      "Phase 4 – Reliability: Offline sync, Sentry monitoring, API integration with KDS/POS.",
+      "Tech: React, MUI, Google Maps, Zustand, Axios, i18next.",
+
+      "🚀 Looking to build a similar platform? Send me an invite"
+    ],
+    skills: [
+      "React",
+      "Material UI",
+      "TypeScript",
+      "Payment Plugin",
+      "SaaS Development"
+    ],
+    description: [
+      "Overview: Tap2Dine is a complete ordering and payment platform designed for restaurants, cafés, food trucks, and multi-location food service businesses.",
+      "The solution consists of two main products — Kiosk and Portal — both integrated with kitchen displays (KDS) and POS systems, ensuring a seamless flow from customer order to food preparation.",
+
+      "1. Kiosk – In-store Self-Service Terminals: Large touch-screen terminals placed inside the venue, allowing customers to browse the menu, customize items, and pay without staff assistance — much like McDonald's ordering stations.",
+      "Key features:",
+      "Multiple payment methods: Cash, Card, Cibus, TenBis, Goodi, Cash on Cloud, Pele Card, Balamut, Split, Google Pay, Apple Pay.",
+      "Real-time menu updates with images, categories, and special offers.",
+      "Multi-language support to cater to diverse audiences.",
+      "Offline mode — orders are saved locally and automatically sent when the internet is restored.",
+      "Dynamic settings updates without redeployment.",
+
+      "2. Portal – Mobile, Tablet, and Desktop Ordering: A responsive web application for customers who want to order remotely or skip the queue by scanning a QR code at the venue.",
+      "Key features:",
+      "Ordering from anywhere — supports home delivery, pick-up, or in-store orders.",
+      "Schedule orders for a specific time or date, even outside business hours.",
+      "QR code entry — the QR contains an embedded API key to load the specific venue’s menu and settings.",
+      "Integrated payment gateway: Pele Card + all major digital wallets.",
+      "Address selection with map integration via Google Maps API.",
+      "Electronic receipts sent via SMS after order confirmation.",
+
+      "3. Common Infrastructure for Kiosk & Portal: Both products share the same backend and API infrastructure, differentiated only by a type parameter in the settings (kiosk or portal).",
+      "Shared functionality:",
+      "Secure API access via unique keys.",
+      "Fetching dynamic settings, menu, and location data on home screen load.",
+      "Integration with KDS (kitchen display system) for order fulfillment.",
+      "Integration with POS systems for cashier and staff operations.",
+      "Automatic language detection and internationalization.",
+
+      "4. Technical Stack:",
+      "Frontend: React, Material UI, Google Maps API, React Hook Form, i18next, Zustand, Axios, Sentry.",
+      "Offline Support: Local storage queue for pending orders.",
+      "Error Monitoring: Sentry with contextual logs for payment status, network errors, and API failures.",
+      "UI/UX: Fully responsive, theme-customizable interface with image-based menu categories.",
+      "Performance Optimizations: API response caching, minimal re-renders, optimized image loading.",
+
+      "5. Security & Reliability:",
+      "API Authorization: All requests require a venue-specific key.",
+      "Offline-first approach ensures no lost orders during connectivity issues.",
+      "Error resilience: Retry logic for payment and order creation.",
+      "Data protection: Sensitive payment info handled via integrated gateways only.",
+
+      "6. Business Value:",
+      "Reduced wait times — customers can order faster, leading to higher turnover rates.",
+      "Increased average check size — upsell and cross-sell prompts are built into the ordering flow.",
+      "Labor cost savings — fewer staff needed for order taking.",
+      "24/7 ordering capability — supports scheduled orders for later fulfillment.",
+      "Brand customization — venue owners can personalize kiosks and portals with their own images, color palettes, and product visuals (via the admin panel)."
+    ]
+  }
+];
+
+// {
+//  id: "",
+//   image: "/portfolio/Positive/4.png",
+//   video: "/portfolio/Positive/video.mp4",
+//   link: "",
+//   title: "",
+//   shortDescription: [],
+//   skills: [],
+//   description: []
+// }
