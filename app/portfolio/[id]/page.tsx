@@ -5,17 +5,22 @@ import { PORTFOLIO } from "@/constants/portfolios";
 import { notFound } from "next/navigation";
 
 interface Props {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export async function generateStaticParams() {
-  return PORTFOLIO.map((p) => ({ id: p.id }));
+  return PORTFOLIO.map((p) => ({
+    id: p.id,
+  }));
 }
 
 export async function generateMetadata({ params }: Props) {
-  const project = PORTFOLIO.find((p) => p.id === params.id);
+  const { id } = await params; // <-- await here
+  const project = PORTFOLIO.find((p) => p.id === id);
 
-  if (!project) return { title: "Not Found | Portfolio" };
+  if (!project) {
+    return { title: "Not Found | Portfolio" };
+  }
 
   return {
     title: `${project.title} | Portfolio`,
@@ -29,7 +34,8 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function Page({ params }: Props) {
-  const project = PORTFOLIO.find((p) => p.id === params.id);
+  const { id } = await params;
+  const project = PORTFOLIO.find((p) => p.id === id);
 
   if (!project) notFound();
 
