@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55b0986d-827c-4643-b825-606baeeb22d2" name="Changes" comment="Add full files">
-      <change afterPath="$PROJECT_DIR$/types/global.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/portfolio/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/portfolio/[id]/page.tsx" afterDir="false" />
+    <list default="true" id="55b0986d-827c-4643-b825-606baeeb22d2" name="Changes" comment="Update for the Deploy">
+      <change beforePath="$PROJECT_DIR$/components/case/MobAlbum.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/case/MobAlbum.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +110,7 @@
       <workItem from="1760534032245" duration="7360000" />
       <workItem from="1760789121594" duration="5009000" />
       <workItem from="1761051401751" duration="2024000" />
-      <workItem from="1761055037388" duration="9511000" />
+      <workItem from="1761055037388" duration="9769000" />
     </task>
     <task id="LOCAL-00001" summary="Add pages: home, portfolio, contact">
       <option name="closed" value="true" />
@@ -138,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761075895446</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update for the Deploy">
+      <option name="closed" value="true" />
+      <created>1761076672350</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761076672350</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +154,7 @@
     <MESSAGE value="Add pages: home, portfolio, contact" />
     <MESSAGE value="Upload other files" />
     <MESSAGE value="Add full files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add full files" />
+    <MESSAGE value="Update for the Deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update for the Deploy" />
   </component>
 </project>

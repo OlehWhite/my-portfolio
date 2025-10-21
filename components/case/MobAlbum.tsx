@@ -7,7 +7,7 @@ interface Props {
 
 const MobAlbum = ({ album }: Props) => {
   return (
-    <div className="flex items-center justify-center flex-wrap gap-3 mt-6 lx:hidden">
+    <div className="flex items-center justify-center flex-wrap gap-3 mt-6 xl:hidden">
       {album.map((picture, index) => (
         <div key={index}>
           <Image
