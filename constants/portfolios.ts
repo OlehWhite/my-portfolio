@@ -3,20 +3,33 @@ import { IPortfolio } from "@/types/portfolio.types";
 export const PORTFOLIO: IPortfolio[] = [
   {
     id: "digitalessentials",
-    specialization: 'Nuxt',
-    image: "/portfolio/DE/1.png",
+    specialization: "Nuxt",
+    image: "/portfolio/DE/logo.png",
     video: "/portfolio/DE/video.mp4",
     link: "https://digitalessentials.co.uk/",
     title: "Website DE - with SEO-Optimized SSR with Nuxt.js | Vue | Mailgun",
+    skills: ["Nuxt.js", "Tailwind CSS", "Web Development", "Mailgun", "GSAP"],
+    images: [
+      "/portfolio/DE/1.jpg",
+      "/portfolio/DE/2.jpg",
+      "/portfolio/DE/3.jpg",
+      "/portfolio/DE/4.jpg",
+      "/portfolio/DE/5.jpg",
+      "/portfolio/DE/6.jpg",
+      "/portfolio/DE/7.jpg",
+      "/portfolio/DE/8.jpg",
+      "/portfolio/DE/9.jpg",
+      "/portfolio/DE/10.jpg",
+      "/portfolio/DE/11.jpg",
+    ],
     shortDescription: [
       "⏱ Duration: 2–3 weeks",
       "1️⃣ Planning (Days 1–3): Optimized UI/UX, defined breakpoints & animation plan, planned CMS",
       "2️⃣ Development (Days 4–14): SSR with Next.js, pixel-perfect responsive layouts with Tailwind, GSAP animations, Swiper sliders, Mailgun setup",
       "3️⃣ Testing (Days 15–18): Cross-browser/device tests, performance tweaks, WCAG compliance, security upgrades",
       "4️⃣ Deployment (Days 19–21): Production build, docs, final QA",
-      "💡 Outcome: Fast, secure, scalable, SEO-friendly site with smooth animations and content management"
+      "💡 Outcome: Fast, secure, scalable, SEO-friendly site with smooth animations and content management",
     ],
-    skills: ["Nuxt.js", "Tailwind CSS", "Web Development", "Mailgun", "GSAP"],
     description: [
       "⏱ Duration: ~2–3 weeks",
       "🛠 Tech Stack: Next.js, Tailwind CSS, GSAP, Swiper.js, Mailgun, Google Analytics 4",
@@ -41,13 +54,13 @@ export const PORTFOLIO: IPortfolio[] = [
       "Provided full documentation for client team.",
       "Final review and QA to ensure flawless user experience.",
       "💡 Result:",
-      "A secure, scalable, and lightning-fast website with top-tier performance scores, smooth animations, and easy-to-manage content — fully optimized for SEO and responsive on all devices."
-    ]
+      "A secure, scalable, and lightning-fast website with top-tier performance scores, smooth animations, and easy-to-manage content — fully optimized for SEO and responsive on all devices.",
+    ],
   },
   {
     id: "luminova",
     specialization: "Webflow",
-    image: "/portfolio/Luminova/10.png",
+    image: "/portfolio/Luminova/logo.png",
     video: "/portfolio/Luminova/video.mp4",
     link: "https://luminova-d93874.webflow.io/",
     title: "Figma to Webflow Website with CMS & Smooth Scroll Animations",
@@ -60,9 +73,17 @@ export const PORTFOLIO: IPortfolio[] = [
       "Smooth scroll interactions and clean section transitions",
       "Optimized images for fast load speed",
       "SEO-friendly structure with proper headings and meta setup",
-      "👉 Send me an invite to your project — I’ll help you bring your vision to life in Webflow."
+      "👉 Send me an invite to your project — I’ll help you bring your vision to life in Webflow.",
     ],
     skills: ["Webflow", "HTML", "CSS", "CMS Development", "UI Animation"],
+    images: [
+      "/portfolio/Luminova/1.jpg",
+      "/portfolio/Luminova/2.jpg",
+      "/portfolio/Luminova/3.jpg",
+      "/portfolio/Luminova/4.jpg",
+      "/portfolio/Luminova/5.jpg",
+      "/portfolio/Luminova/6.jpg",
+    ],
     description: [
       "Goal: Design and develop a modern, visually engaging website for Luminova, a company specializing in premium lighting solutions. The main task was to translate the brand’s creative direction into a fully responsive Webflow site that could both showcase their services and inspire trust through a polished digital presence.",
       "Process:",
@@ -81,13 +102,13 @@ export const PORTFOLIO: IPortfolio[] = [
       "Optimized assets for faster performance and better SEO ranking.",
       "Structured content hierarchy for readability and accessibility.",
       "Result: The final website delivers the promised “WOW factor” of the brand — strong visuals, a clean layout, and smooth navigation. It positions Luminova as a forward-thinking company in the lighting industry while providing their marketing team with a flexible, easy-to-manage platform for ongoing updates.",
-      "👉 If you’re looking for a Webflow expert to bring your designs to life with the same level of detail and precision — send me an invite, and let’s get started."
-    ]
+      "👉 If you’re looking for a Webflow expert to bring your designs to life with the same level of detail and precision — send me an invite, and let’s get started.",
+    ],
   },
   {
     id: "visual-property",
     specialization: "Nuxt",
-    image: "/portfolio/VP/8.png",
+    image: "/portfolio/VP/logo.png",
     video: "/portfolio/VP/video.mp4",
     link: "https://visualproperty.co.uk/",
     title: "Development Homepage Redesign (Nuxt + Tailwind)",
@@ -96,14 +117,24 @@ export const PORTFOLIO: IPortfolio[] = [
       "🛠 Implementation: Built homepage blocks using Nuxt, Vue, HTML, Tailwind; interactive sections with smooth open/close; smooth scrolling; fully responsive for desktop, tablet, and mobile; semantic structure for SEO.",
       "🚀 Result: Polished, user-friendly page, intuitive for exploring key features, scalable for future updates.",
       "⏱ Time: 8 hours for layout + 3 hours for responsive adaptation.",
-      "👉 Next Step:Send me an invitation or accept my offer!"
+      "👉 Next Step:Send me an invitation or accept my offer!",
     ],
     skills: [
       "Nuxt.js",
       "HTML5",
       "Tailwind CSS",
       "TypeScript",
-      "Adaptive Web Design"
+      "Adaptive Web Design",
+    ],
+    images: [
+      "/portfolio/VP/1.jpg",
+      "/portfolio/VP/2.jpg",
+      "/portfolio/VP/3.jpg",
+      "/portfolio/VP/4.jpg",
+      "/portfolio/VP/5.jpg",
+      "/portfolio/VP/6.jpg",
+      "/portfolio/VP/7.jpg",
+      "/portfolio/VP/8.jpg",
     ],
     description: [
       "🎯 Goal: Implement a clean, modern homepage layout for Visual Property, enhancing clarity and usability while highlighting key features like property insights, interactive maps, and company information. The client wanted a homepage that explains their platform, showcases functionality, and improves user engagement.",
@@ -115,13 +146,13 @@ export const PORTFOLIO: IPortfolio[] = [
       "Built semantic HTML structure with header, footer, main sections for clarity and SEO readiness.",
       "🚀 Result: Delivered a polished homepage that effectively communicates Visual Property’s mission and platform features. The interactive section allows users to explore key insights intuitively. The design is scalable for future updates or additional sections.",
       "⏱ Timeline: Completed efficiently within a structured workflow.",
-      "👉 Need a similar project that can be quickly implemented on Nuxt, Vue, React, Next, or Webflow? Send me an invitation or select my offer — I will be happy to create it for you."
-    ]
+      "👉 Need a similar project that can be quickly implemented on Nuxt, Vue, React, Next, or Webflow? Send me an invitation or select my offer — I will be happy to create it for you.",
+    ],
   },
   {
     id: "renova-new",
     specialization: "Webflow",
-    image: "/portfolio/Renova/9.png",
+    image: "/portfolio/Renova/logo.png",
     video: "/portfolio/Renova/video.mp4",
     link: "https://renova-new.webflow.io/",
     title: "Webflow Project: Website Redesign & Landing Page Design",
@@ -132,14 +163,21 @@ export const PORTFOLIO: IPortfolio[] = [
       "Timeframe: ~2 weeks from start to delivery.",
       "Features: Smooth animations, SEO-friendly structure, fast load speed, and an easy-to-edit Webflow CMS.",
       "Result: A modern landing page that improves user engagement and highlights services clearly.",
-      "👉 Send me an invite to your project — let’s bring your ideas to life!"
+      "👉 Send me an invite to your project — let’s bring your ideas to life!",
     ],
-    skills: [
-      "Webflow",
-      "HTML5",
-      "CSS 3",
-      "JavaScript",
-      "Slider Plugin"
+    skills: ["Webflow", "HTML5", "CSS 3", "JavaScript", "Slider Plugin"],
+    images: [
+      "/portfolio/Renova/1.jpg",
+      "/portfolio/Renova/2.jpg",
+      "/portfolio/Renova/3.jpg",
+      "/portfolio/Renova/4.jpg",
+      "/portfolio/Renova/5.jpg",
+      "/portfolio/Renova/6.jpg",
+      "/portfolio/Renova/7.jpg",
+      "/portfolio/Renova/8.jpg",
+      "/portfolio/Renova/9.jpg",
+      "/portfolio/Renova/10.jpg",
+      "/portfolio/Renova/11.jpg",
     ],
     description: [
       "Project Overview",
@@ -165,13 +203,13 @@ export const PORTFOLIO: IPortfolio[] = [
 
       "Outcome",
       "The redesigned landing page not only improved the visual appeal but also increased user engagement and clarity of information.",
-      "It made it easier for visitors to understand the company’s services and take action."
-    ]
+      "It made it easier for visitors to understand the company’s services and take action.",
+    ],
   },
   {
     id: "planto",
     specialization: "Webflow",
-    image: "/portfolio/Planto/7.png",
+    image: "/portfolio/Planto/logo.png",
     video: "/portfolio/Planto/video.mp4",
     link: "https://planto-dot.webflow.io/",
     title: "Website from Figma to Webflow with CMS, animations, slider",
@@ -187,14 +225,18 @@ export const PORTFOLIO: IPortfolio[] = [
       "⚡ Clean, lightweight structure with fast loading speed.",
       "🌱 Ready for future growth: online store, blog, articles.",
 
-      "🚀 Need a similar Webflow project delivered fast? Send me an invite or select my proposal — I’ll be glad to build it for you."
+      "🚀 Need a similar Webflow project delivered fast? Send me an invite or select my proposal — I’ll be glad to build it for you.",
     ],
-    skills: [
-      "Webflow",
-      "CMS Development",
-      "JavaScript",
-      "HTML5",
-      "CSS 3"
+    skills: ["Webflow", "CMS Development", "JavaScript", "HTML5", "CSS 3"],
+    images: [
+      "/portfolio/Planto/1.jpg",
+      "/portfolio/Planto/2.jpg",
+      "/portfolio/Planto/3.jpg",
+      "/portfolio/Planto/4.jpg",
+      "/portfolio/Planto/5.jpg",
+      "/portfolio/Planto/6.jpg",
+      "/portfolio/Planto/7.jpg",
+      "/portfolio/Planto/8.jpg",
     ],
     description: [
       "🎯 Goal",
@@ -211,13 +253,13 @@ export const PORTFOLIO: IPortfolio[] = [
       "🚀 Result",
       "Delivered a stylish, responsive, and functional website that can easily be expanded in the future. The next development steps include integrating e-commerce for online flower sales, adding a blog, and creating a knowledge section with plant care tips.",
 
-      "If you’re looking for a Webflow expert to bring your idea to life, feel free to send me an invite — I’d be glad to discuss your project."
-    ]
+      "If you’re looking for a Webflow expert to bring your idea to life, feel free to send me an invite — I’d be glad to discuss your project.",
+    ],
   },
   {
     id: "socal-living",
     specialization: "Next",
-    image: "/portfolio/SoCalLiving/2.png",
+    image: "/portfolio/SoCalLiving/logo.png",
     video: "/portfolio/SoCalLiving/video.mp4",
     link: "https://planto-dot.webflow.io/",
     title: "Landing Page Development from Figma — Next.js & TypeScript",
@@ -233,14 +275,23 @@ export const PORTFOLIO: IPortfolio[] = [
       "5. Integrated form submission via Mailgun to send directly to client’s email.",
 
       "💡 Outcome:",
-      "A high-performance, SEO-optimized, and accessible landing page with smooth mobile experience and reliable contact form delivery."
+      "A high-performance, SEO-optimized, and accessible landing page with smooth mobile experience and reliable contact form delivery.",
     ],
     skills: [
       "Next.js",
       "TypeScript",
       "Tailwind CSS",
       "Web Development",
-      "Mailgun"
+      "Mailgun",
+    ],
+    images: [
+      "/portfolio/SoCalLiving/1.jpg",
+      "/portfolio/SoCalLiving/2.jpg",
+      "/portfolio/SoCalLiving/3.jpg",
+      "/portfolio/SoCalLiving/4.jpg",
+      "/portfolio/SoCalLiving/5.jpg",
+      "/portfolio/SoCalLiving/6.jpg",
+      "/portfolio/SoCalLiving/7.jpg",
     ],
     description: [
       "⏱ Duration: 20 hours (including edits & content updates)",
@@ -257,13 +308,13 @@ export const PORTFOLIO: IPortfolio[] = [
       "💡 Outcome:",
       "A high-performance, SEO-optimized, and accessible landing page that delivers a smooth mobile experience, fast load times, and reliable form submissions — fully aligned with the client’s vision and business goals.",
 
-      "📩 Let’s work together: Interested in fast, high-quality web development? Send me an invite on Upwork, or contact me to request an invite, and let’s start your project!"
-    ]
+      "📩 Let’s work together: Interested in fast, high-quality web development? Send me an invite on Upwork, or contact me to request an invite, and let’s start your project!",
+    ],
   },
   {
     id: "mntn",
     specialization: "Webflow",
-    image: "/portfolio/MNTN/3.png",
+    image: "/portfolio/MNTN/logo.png",
     video: "/portfolio/MNTN/video.mp4",
     link: "https://mntn-f5c343.webflow.io/",
     title: "Webflow Website with Scroll Animations & CMS Integration",
@@ -279,14 +330,19 @@ export const PORTFOLIO: IPortfolio[] = [
       "5. Integrate smooth scroll & hover effects.",
       "6. Final feedback.",
       "This business card website features a modern hero section with immersive visuals, responsive layouts for all devices, and animations that bring the design to life.",
-      "— Want a similar project on Webflow? Write to me and let’s discuss your idea."
+      "— Want a similar project on Webflow? Write to me and let’s discuss your idea.",
     ],
-    skills: [
-      "Webflow",
-      "CSS 3",
-      "HTML5",
-      "JavaScript",
-      "Web Design"
+    skills: ["Webflow", "CSS 3", "HTML5", "JavaScript", "Web Design"],
+    images: [
+      "/portfolio/MNTN/1.jpg",
+      "/portfolio/MNTN/2.jpg",
+      "/portfolio/MNTN/3.jpg",
+      "/portfolio/MNTN/4.jpg",
+      "/portfolio/MNTN/5.jpg",
+      "/portfolio/MNTN/6.jpg",
+      "/portfolio/MNTN/7.jpg",
+      "/portfolio/MNTN/8.jpg",
+      "/portfolio/MNTN/9.jpg",
     ],
     description: [
       "⏱ Duration: 7 days",
@@ -306,17 +362,18 @@ export const PORTFOLIO: IPortfolio[] = [
 
       "💡 Outcome: A sleek, fast-loading business card website that not only looks stunning but also offers an intuitive and engaging user experience across all devices — proving that Webflow can handle sophisticated animations and responsive design without sacrificing performance.",
 
-      "📩 Interested in a similar Webflow project? Let’s connect and bring your ideas to life with smooth animations and cutting-edge design."
-    ]
+      "📩 Interested in a similar Webflow project? Let’s connect and bring your ideas to life with smooth animations and cutting-edge design.",
+    ],
   },
   {
     id: "tap-2-dine",
     specialization: "Next",
-    image: "/portfolio/T2D/11.png",
+    image: "/portfolio/T2D/logo.png",
     video: "/portfolio/T2D/video.mp4",
     link: "https://www.tap2dine.com/",
     title: "SEO Website Dev: Figma to Next.js | TS | TailwindCSS",
-    shortDescription: ["⏱ Duration: 2 weeks",
+    shortDescription: [
+      "⏱ Duration: 2 weeks",
       "🛠 Tech Stack: Next.js, Tailwind CSS, TypeScript, Swiper.js, Mailgun",
 
       "Work Stages:",
@@ -327,15 +384,26 @@ export const PORTFOLIO: IPortfolio[] = [
       "Applied full SEO optimization for maximum search visibility",
       "Conducted testing, performance tuning, and cross-device checks",
 
-      "📩 Interested in a similar project? Send me an invite on Upwork to start our collaboration."
+      "📩 Interested in a similar project? Send me an invite on Upwork to start our collaboration.",
     ],
     skills: [
       "Next.js",
       "Tailwind CSS",
       "TypeScript",
       "REST API",
-      "Web Development"
-
+      "Web Development",
+    ],
+    images: [
+      "/portfolio/T2D/1.jpg",
+      "/portfolio/T2D/2.jpg",
+      "/portfolio/T2D/3.jpg",
+      "/portfolio/T2D/4.jpg",
+      "/portfolio/T2D/5.jpg",
+      "/portfolio/T2D/6.jpg",
+      "/portfolio/T2D/7.jpg",
+      "/portfolio/T2D/8.jpg",
+      "/portfolio/T2D/9.jpg",
+      "/portfolio/T2D/10.jpg",
     ],
     description: [
       "Technologies Used: Next.js, Tailwind CSS, TypeScript, Swiper.js, Mailgun",
@@ -354,15 +422,15 @@ export const PORTFOLIO: IPortfolio[] = [
       "The project was completed within the specified timeframe, delivering a professional, user-friendly, and SEO-optimized website that effectively communicates Tap2Dine's value proposition to potential franchisees.",
 
       "Call to action:",
-      "Interested in creating a similar high-performance website? Let's work together to bring your idea to life. Send me an invite to discuss your project requirements and how we can work together to achieve your goals."
-    ]
+      "Interested in creating a similar high-performance website? Let's work together to bring your idea to life. Send me an invite to discuss your project requirements and how we can work together to achieve your goals.",
+    ],
   },
   {
     id: "positiveresetservices",
     specialization: "Next",
-    image: "/portfolio/Positive/4.png",
+    image: "/portfolio/Positive/logo.png",
     video: "/portfolio/Positive/video.mp4",
-    link: "https://www.tap2dine.com/",
+    link: "https://www.positiveresetservices.com/",
     title: "SEO Website Dev: Figma to Next.js | TS | TailwindCSS",
     shortDescription: [
       "⏱ Duration: 6+ weeks",
@@ -376,14 +444,22 @@ export const PORTFOLIO: IPortfolio[] = [
       "Ensured SEO optimization, fast performance, and cross-browser compatibility",
       "Conducted thorough testing and provided ongoing support",
 
-      "📩 Interested in a similar project? Send me an invite on Upwork to collaborate."
+      "📩 Interested in a similar project? Send me an invite on Upwork to collaborate.",
     ],
-    skills: [
-      "Next.js",
-      "Firebase",
-      "CSS 3",
-      "REST API",
-      "HTML5"
+    skills: ["Next.js", "Firebase", "CSS 3", "REST API", "HTML5"],
+    images: [
+      "/portfolio/Positive/1.jpg",
+      "/portfolio/Positive/2.jpg",
+      "/portfolio/Positive/3.jpg",
+      "/portfolio/Positive/4.jpg",
+      "/portfolio/Positive/5.jpg",
+      "/portfolio/Positive/6.jpg",
+      "/portfolio/Positive/7.jpg",
+      "/portfolio/Positive/8.jpg",
+      "/portfolio/Positive/9.jpg",
+      "/portfolio/Positive/10.jpg",
+      "/portfolio/Positive/11.jpg",
+      "/portfolio/Positive/12.jpg",
     ],
     description: [
       "Project Overview",
@@ -414,13 +490,13 @@ export const PORTFOLIO: IPortfolio[] = [
       "Provided ongoing support and maintenance post-launch, promptly addressing client requests and updates.",
 
       "Outcome",
-      "Delivered a modern, multilingual, and fully manageable clinic website paired with a powerful custom admin panel. The client can easily update content, add news, manage languages, and monitor user engagement through analytics, all without developer assistance."
-    ]
+      "Delivered a modern, multilingual, and fully manageable clinic website paired with a powerful custom admin panel. The client can easily update content, add news, manage languages, and monitor user engagement through analytics, all without developer assistance.",
+    ],
   },
   {
     id: "damka-systems",
-    specialization: 'React',
-    image: "/portfolio/DamkaSestems/6.png",
+    specialization: "React",
+    image: "/portfolio/DamkaSestems/logo.png",
     video: "",
     link: "",
     title: "SaaS Multi-Platform Restaurant Management – Admin Panel",
@@ -435,14 +511,20 @@ export const PORTFOLIO: IPortfolio[] = [
       "5. Reporting & analytics (Facebook Pixel, custom reports)",
       "6. Integrations with KDS/POS, API sync & offline mode",
 
-      "📩 Looking for a similar SaaS project? Message or invite me on Upwork."
+      "📩 Looking for a similar SaaS project? Message or invite me on Upwork.",
     ],
-    skills: [
-      "React",
-      "Material UI",
-      "Redux",
-      "REST API",
-      "TypeScript"
+    skills: ["React", "Material UI", "Redux", "REST API", "TypeScript"],
+    images: [
+      "/portfolio/DamkaSestems/1.jpg",
+      "/portfolio/DamkaSestems/2.jpg",
+      "/portfolio/DamkaSestems/3.jpg",
+      "/portfolio/DamkaSestems/4.jpg",
+      "/portfolio/DamkaSestems/5.jpg",
+      "/portfolio/DamkaSestems/6.jpg",
+      "/portfolio/DamkaSestems/7.jpg",
+      "/portfolio/DamkaSestems/8.jpg",
+      "/portfolio/DamkaSestems/9.jpg",
+      "/portfolio/DamkaSestems/10.jpg",
     ],
     description: [
       "A robust multi-role administration platform designed for managing the entire Kiosk & Portal ecosystem. The panel supports multiple roles (Super Admin, Admin, Manager, Cashier) and allows clients to manage their business hierarchy — from multiple businesses to specific locations, staff, and work schedules.",
@@ -460,16 +542,17 @@ export const PORTFOLIO: IPortfolio[] = [
       "📆 Development time: 2 years",
       "🛠 Technologies: React, Material UI, Google Maps API, React Hook Form, i18next, Zustand, Axios, Sentry.",
 
-      "💬 If you’re looking for a highly customizable, multi-location restaurant SaaS solution, send me a message or invite me on Upwork."
-    ]
+      "💬 If you’re looking for a highly customizable, multi-location restaurant SaaS solution, send me a message or invite me on Upwork.",
+    ],
   },
   {
     id: "pos",
     specialization: "React",
-    image: "/portfolio/POS/5.png",
+    image: "/portfolio/POS/logo.png",
     video: "",
     link: "",
-    title: "POS Restaurant SaaS – Web, Mobile & Self-Service Kiosk Ordering System",
+    title:
+      "POS Restaurant SaaS – Web, Mobile & Self-Service Kiosk Ordering System",
     shortDescription: [
       "Tech: React, MUI, Google Maps, Zustand, Axios, i18next.",
       "Timeline: 2 years.",
@@ -480,14 +563,37 @@ export const PORTFOLIO: IPortfolio[] = [
       "Phase 4 – Reliability: Offline sync, Sentry monitoring, API integration with KDS/POS.",
       "Tech: React, MUI, Google Maps, Zustand, Axios, i18next.",
 
-      "🚀 Looking to build a similar platform? Send me an invite"
+      "🚀 Looking to build a similar platform? Send me an invite",
     ],
     skills: [
       "React",
       "Material UI",
       "TypeScript",
       "Payment Plugin",
-      "SaaS Development"
+      "SaaS Development",
+    ],
+    images: [
+      "/portfolio/POS/1.jpg",
+      "/portfolio/POS/2.jpg",
+      "/portfolio/POS/3.jpg",
+      "/portfolio/POS/4.jpg",
+      "/portfolio/POS/5.jpg",
+      "/portfolio/POS/6.jpg",
+      "/portfolio/POS/7.jpg",
+      "/portfolio/POS/8.jpg",
+      "/portfolio/POS/9.jpg",
+      "/portfolio/POS/11.jpg",
+      "/portfolio/POS/12.jpg",
+      "/portfolio/POS/13.jpg",
+      "/portfolio/POS/14.jpg",
+      "/portfolio/POS/15.jpg",
+      "/portfolio/POS/16.jpg",
+      "/portfolio/POS/17.jpg",
+      "/portfolio/POS/18.jpg",
+      "/portfolio/POS/19.jpg",
+      "/portfolio/POS/20.jpg",
+      "/portfolio/POS/21.jpg",
+      "/portfolio/POS/22.jpg",
     ],
     description: [
       "Overview: Tap2Dine is a complete ordering and payment platform designed for restaurants, cafés, food trucks, and multi-location food service businesses.",
@@ -536,18 +642,7 @@ export const PORTFOLIO: IPortfolio[] = [
       "Increased average check size — upsell and cross-sell prompts are built into the ordering flow.",
       "Labor cost savings — fewer staff needed for order taking.",
       "24/7 ordering capability — supports scheduled orders for later fulfillment.",
-      "Brand customization — venue owners can personalize kiosks and portals with their own images, color palettes, and product visuals (via the admin panel)."
-    ]
-  }
+      "Brand customization — venue owners can personalize kiosks and portals with their own images, color palettes, and product visuals (via the admin panel).",
+    ],
+  },
 ];
-
-// {
-//  id: "",
-//   image: "/portfolio/Positive/4.png",
-//   video: "/portfolio/Positive/video.mp4",
-//   link: "",
-//   title: "",
-//   shortDescription: [],
-//   skills: [],
-//   description: []
-// }

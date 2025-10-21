@@ -8,11 +8,11 @@ interface Props {
 
 const Project = ({ project }: Props) => {
   return (
-    <div className="p-6 rounded-lg flex gap-6 duration-300 hover:bg-[#FFFFFF2C]">
+    <div className="p-6 rounded-lg flex flex-col gap-6 duration-300 hover:bg-[#FFFFFF2C] xl:flex-row">
       <AnimateLogo project={project} />
 
       <div className="w-full max-w-[800px] flex flex-col gap-3">
-        <div className="flex justify-between">
+        <div className="flex flex-wrap gap-3 justify-between">
           {project.link ? (
             <Link
               className="w-fit px-5 py-2 m-0 text-lg text-light rounded-lg bg-[#FFFFFF2F] duration-300 hover:bg-blue-300"
@@ -30,7 +30,6 @@ const Project = ({ project }: Props) => {
           <Link
             className="w-fit px-5 py-2 m-0 text-lg text-light rounded-lg bg-[#FFFFFF2F] duration-300 hover:bg-blue-300"
             href={`/portfolio/${project.id}`}
-            target="_blank"
           >
             Read More
           </Link>

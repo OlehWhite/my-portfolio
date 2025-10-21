@@ -8,9 +8,9 @@ import Project from "@/components/portfolio/Project";
 import ReactPaginate from "react-paginate";
 import AnimationLayout from "@/layouts/AnimationLayout";
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 5;
 
-const Portfolio = () => {
+const PortfolioPage = () => {
   const [currentItems, setCurrentItems] = useState(
     PORTFOLIO.slice(0, ITEMS_PER_PAGE),
   );
@@ -24,7 +24,7 @@ const Portfolio = () => {
     <MainLayout page={ENavLinks.PORTFOLIO}>
       <div className="flex flex-col gap-10">
         {currentItems.map((project) => (
-          <AnimationLayout key={project.id} delay={0.5}>
+          <AnimationLayout key={project.id} delay={0.3}>
             <Project project={project} />
           </AnimationLayout>
         ))}
@@ -48,4 +48,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default PortfolioPage;

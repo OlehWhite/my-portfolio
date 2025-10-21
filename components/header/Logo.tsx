@@ -3,13 +3,15 @@ import Image from "next/image";
 
 const Logo = () => {
   return (
-    <Image
-      width={80}
-      height={80}
-      src="/logo.png"
-      alt="Main Logo"
-      title="Main Logo"
-    />
+    <div className="relative w-[40px] h-[40px] md:w-[80px] md:h-[80px]">
+      <Image
+        src="/logo.png"
+        alt="Main Logo"
+        title="Main Logo"
+        fill
+        className="object-contain"
+      />
+    </div>
   );
 };
 

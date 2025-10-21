@@ -8,7 +8,7 @@ interface Props {
 
 const Header = ({ page }: Props) => {
   return (
-    <header className="flex-wrap md:flex-nowrap flex justify-between ">
+    <header className="flex-wrap md:flex-nowrap flex justify-between">
       <Logo />
       <Nav page={page} />
     </header>

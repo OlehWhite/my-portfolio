@@ -9,12 +9,12 @@ interface Props {
 const Nav = ({ page }: Props) => {
   return (
     <nav className="flex items-center">
-      <ul className="flex gap-6 list-none">
+      <ul className="flex gap-6 list-none p-0">
         {NAV_MENU.map((el, index) => (
           <li key={index}>
             <Link
               href={el.url}
-              className={`${page === el.url ? "text-primary" : "text-light"} no-underline text-xl`}
+              className={`${page === el.url ? "text-primary" : "text-light"} no-underline text-sm md:text-xl`}
             >
               {el.value}
             </Link>

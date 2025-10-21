@@ -1,6 +1,6 @@
 export interface IPortfolio {
   id: string;
-  specialization: string
+  specialization: string;
   image: string;
   video: string;
   link: string;
@@ -8,4 +8,5 @@ export interface IPortfolio {
   shortDescription: string[];
   skills: string[];
   description: string[];
+  images: string[];
 }

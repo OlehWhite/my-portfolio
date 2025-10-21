@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import MainLayout from "@/layouts/MainLayout";
 import { ReactNode } from "react";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -12,7 +11,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Bilostotskyi Oleh - Front-End Developer / Webflow Specialist",
-  description: "",
+  description:
+    "Portfolio, Front-End Development, Webflow, React, Next.js projects by Bilostotskyi Oleh",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

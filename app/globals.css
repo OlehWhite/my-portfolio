@@ -9,19 +9,88 @@ html {
             rgba(0, 84, 128, 1) 19%,
             rgba(0, 41, 79, 1) 37%,
             rgba(0, 0, 0, 1) 66%
-    );
-    background-attachment: fixed; /* ось тут магія */
-    background-size: cover; /* щоб покрити весь екран */
+    ) fixed;
+    background-size: cover;
+
+    /* Це для Firefox */
+    scrollbar-color: rgba(180, 180, 180, 0.5) transparent;
+    scrollbar-width: thin;
 }
 
 body {
-    padding: 40px 0 0 0;
+    padding: 40px 0 100px 0;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     color: white;
+    overflow-y: scroll; /* Щоб scrollbar завжди був */
 }
 
+/* === Chrome, Edge, Safari === */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
 
+::-webkit-scrollbar-track {
+    background: transparent; /* прозорий фон */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(200, 200, 200, 0.35); /* сірий прозорий */
+    border-radius: 10px;
+    border: 2px solid transparent; /* робить “повітря” навколо */
+    background-clip: content-box;
+    transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Для горизонтальних */
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+.perspective {
+    perspective: 1000px;
+}
+
+.tilt {
+    position: relative;
+    transform: rotateY(55deg) rotateX(0deg);
+    transition: transform 1s ease;
+}
+
+.tilt::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(120, 120, 120, 0.52);
+    border-radius: 12px;
+    transition: background 0.5s ease;
+    z-index: 2;
+}
+
+/* Hover-ефект */
+.tilt:hover {
+    cursor: pointer;
+    transform: rotateY(55deg) rotateX(0deg) translateY(-200px) scale(1.03);
+}
+
+.tilt:hover::before {
+    background: rgba(120, 120, 120, 0);
+}
+
+/* === Адаптація під мобільні === */
+@media (max-width: 768px) {
+    .tilt {
+        transform: rotateY(20deg);
+    }
+
+    .tilt:hover {
+        transform: rotateY(20deg) translateY(-50px) scale(1.02);
+    }
+}

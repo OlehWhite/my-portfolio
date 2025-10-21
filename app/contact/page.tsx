@@ -2,7 +2,7 @@ import MainLayout from "@/layouts/MainLayout";
 import { ENavLinks } from "@/types/nav.types";
 import React from "react";
 
-const Contact = () => {
+const ContactPage = () => {
   return (
     <MainLayout page={ENavLinks.CONTACT}>
       <p className="text-xl">
@@ -15,4 +15,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;
