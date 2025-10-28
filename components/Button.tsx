@@ -5,9 +5,10 @@ interface Props {
   color?: TemplateKey;
   children: ReactNode;
   href?: string;
+  download?: boolean;
 }
 
-const Button = ({ href, color = "main", children }: Props) => {
+const Button = ({ href, color = "main", children, download }: Props) => {
   const bgTemplate: ITemplate = {
     main: "bg-primary",
     secondary: "bg-light",
@@ -21,6 +22,7 @@ const Button = ({ href, color = "main", children }: Props) => {
   return (
     <a
       href={href}
+      download={download}
       className={`
         ${bgTemplate[color]} ${textTemplate[color]} 
         no-underline

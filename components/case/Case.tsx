@@ -15,7 +15,7 @@ const Case = ({ project }: Props) => {
         <div className="flex flex-col gap-3">
           {project.video ? (
             <video
-              className={"w-full max-w-[650px]"}
+              className={"w-full max-w-[300px] md:max-w-[650px]"}
               src={project.video}
               autoPlay
               controls

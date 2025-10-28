@@ -8,7 +8,7 @@ interface Props {
 
 const Project = ({ project }: Props) => {
   return (
-    <div className="p-6 rounded-lg flex flex-col gap-6 duration-300 hover:bg-[#FFFFFF2C] xl:flex-row">
+    <div className="p-1 md:p-6 rounded-lg flex flex-col gap-6 duration-300 hover:bg-[#FFFFFF2C] xl:flex-row">
       <AnimateLogo project={project} />
 
       <div className="w-full max-w-[800px] flex flex-col gap-3">
@@ -43,7 +43,7 @@ const Project = ({ project }: Props) => {
           ))}
         </div>
 
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-3">
           {project.skills.map((el, index) => (
             <p
               key={index}

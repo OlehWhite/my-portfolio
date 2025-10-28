@@ -261,7 +261,7 @@ export const PORTFOLIO: IPortfolio[] = [
     specialization: "Next",
     image: "/portfolio/SoCalLiving/logo.png",
     video: "/portfolio/SoCalLiving/video.mp4",
-    link: "https://planto-dot.webflow.io/",
+    link: "https://sclivingrd.com/",
     title: "Landing Page Development from Figma — Next.js & TypeScript",
     shortDescription: [
       "⏱ Duration: 20 hours (including edits & content changes)",

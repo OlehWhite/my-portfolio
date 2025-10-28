@@ -13,7 +13,7 @@ const AnimateLogo = ({ project }: Props) => {
 
   return (
     <div
-      className="relative w-[500px] h-[320px] rounded-lg overflow-hidden"
+      className="relative w-full h-[200px] md:w-[500px] md:h-[320px] rounded-lg overflow-hidden"
       onMouseEnter={() => project.video && setHovered(true)}
       onMouseLeave={() => project.video && setHovered(false)}
     >
@@ -33,7 +33,7 @@ const AnimateLogo = ({ project }: Props) => {
           autoPlay
           loop
           muted
-          className={`absolute top-0 left-0 w-full h-full object-cover rounded-lg transition-opacity duration-500 ${
+          className={`none md:flex absolute top-0 left-0 w-full h-full object-cover rounded-lg transition-opacity duration-500 ${
             hovered ? "opacity-100" : "opacity-0"
           }`}
         />
