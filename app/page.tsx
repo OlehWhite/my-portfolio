@@ -21,7 +21,7 @@ const HomePage = () => {
     <MainLayout page={ENavLinks.HOME}>
       <section className="flex-wrap flex gap-2 md:gap-6 items-center justify-center md:flex-nowrap md:justify-between">
         <div className="w-full max-w-[750px]">
-          <h1 className="text-3xl md:text-6xl mb-0">{HERO.hello}</h1>
+          <h1 className="text-2xl md:text-6xl mb-0">{HERO.hello}</h1>
           <h2>
             <span className="text-xl md:text-3xl text-primary">
               {HERO.technologies.frontend}
@@ -31,7 +31,11 @@ const HomePage = () => {
               {HERO.technologies.webflow}
             </span>
           </h2>
-          <p className="text-base md:text-lg">{HERO.text}</p>
+          {HERO.text.map((text, index) => (
+            <p key={index} className="text-base md:text-lg">
+              {text}
+            </p>
+          ))}
 
           <div className="flex gap-6 justify-center md:justify-start">
             <Button href="mailto:oleg22098d@gmail.com">Let&#39;s Talk</Button>
