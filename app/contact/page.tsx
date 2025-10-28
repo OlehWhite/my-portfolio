@@ -27,7 +27,7 @@ const ContactPage = () => {
         <p className="text-xl">
           CV:{" "}
           <a
-            href="/files/CV_Bilostotsyi_Oleh_Front_end_React_2025.pdf"
+            href="/files/CV_Bilostotskyi_Oleh_Front_End_React_2025.pdf"
             download
             className="text-primary underline hover:text-primary/80 transition"
           >

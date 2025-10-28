@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55b0986d-827c-4643-b825-606baeeb22d2" name="Changes" comment="Hide MobAlbum component for the desktop">
-      <change afterPath="$PROJECT_DIR$/public/files/CV_Bilostotsyi_Oleh_Front_end_React_2025.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logo-cv.png" afterDir="false" />
+    <list default="true" id="55b0986d-827c-4643-b825-606baeeb22d2" name="Changes" comment="IMPROVEMENT: button experience was added in the home page&#10;FIX: project link, responsive on mobile/tablet&#10;NEW UI: was added likedIn link and added my CV file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/contact/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/case/Case.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/case/Case.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/case/MobAlbum.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/case/MobAlbum.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/portfolio/AnimateLogo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/portfolio/AnimateLogo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/portfolio/Project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/portfolio/Project.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/portfolios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/portfolios.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/Logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/files/CV_Bilostotsyi_Oleh_Front_end_React_2025.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/files/CV_Bilostotskyi_Oleh_Front_End_React_2025.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,8 +67,8 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public/files" />
+      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/portfolio/POS" />
       <recent name="$PROJECT_DIR$/public/portfolio/DamkaSestems" />
@@ -123,7 +116,7 @@
       <workItem from="1761051401751" duration="2024000" />
       <workItem from="1761055037388" duration="12096000" />
       <workItem from="1761151856004" duration="335000" />
-      <workItem from="1761677789698" duration="2417000" />
+      <workItem from="1761677789698" duration="3355000" />
     </task>
     <task id="LOCAL-00001" summary="Add pages: home, portfolio, contact">
       <option name="closed" value="true" />
@@ -165,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761076938322</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="IMPROVEMENT: button experience was added in the home page&#10;FIX: project link, responsive on mobile/tablet&#10;NEW UI: was added likedIn link and added my CV file">
+      <option name="closed" value="true" />
+      <created>1761680483738</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1761680483738</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +178,7 @@
     <MESSAGE value="Add full files" />
     <MESSAGE value="Update for the Deploy" />
     <MESSAGE value="Hide MobAlbum component for the desktop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hide MobAlbum component for the desktop" />
+    <MESSAGE value="IMPROVEMENT: button experience was added in the home page&#10;FIX: project link, responsive on mobile/tablet&#10;NEW UI: was added likedIn link and added my CV file" />
+    <option name="LAST_COMMIT_MESSAGE" value="IMPROVEMENT: button experience was added in the home page&#10;FIX: project link, responsive on mobile/tablet&#10;NEW UI: was added likedIn link and added my CV file" />
   </component>
 </project>

@@ -36,7 +36,7 @@ const HomePage = () => {
           <div className="flex gap-6">
             <Button href="mailto:oleg22098d@gmail.com">Let&#39;s Talk</Button>
             <Button
-              href="/files/CV_Bilostotsyi_Oleh_Front_end_React_2025.pdf"
+              href="/files/CV_Bilostotskyi_Oleh_Front_End_React_2025.pdf"
               download
             >
               My Experience
