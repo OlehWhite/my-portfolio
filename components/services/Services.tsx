@@ -19,7 +19,7 @@ const Services = ({ data }: Props) => {
   );
 
   return (
-    <div className="p-6">
+    <div className="p-2 md:p-6">
       <div className="flex gap-4 mb-6 flex-wrap">
         {data.map((service) => (
           <button

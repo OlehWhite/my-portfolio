@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55b0986d-827c-4643-b825-606baeeb22d2" name="Changes" comment="IMPROVEMENT: button experience was added in the home page&#10;FIX: project link, responsive on mobile/tablet&#10;NEW UI: was added likedIn link and added my CV file">
+    <list default="true" id="55b0986d-827c-4643-b825-606baeeb22d2" name="Changes" comment="CHANGE: CV file&#10;FIX: logo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/contact/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/Logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/files/CV_Bilostotsyi_Oleh_Front_end_React_2025.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/files/CV_Bilostotskyi_Oleh_Front_End_React_2025.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/services/Services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/services/Services.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/portfolios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/portfolios.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/MainLayout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +116,7 @@
       <workItem from="1761051401751" duration="2024000" />
       <workItem from="1761055037388" duration="12096000" />
       <workItem from="1761151856004" duration="335000" />
-      <workItem from="1761677789698" duration="3355000" />
+      <workItem from="1761677789698" duration="4495000" />
     </task>
     <task id="LOCAL-00001" summary="Add pages: home, portfolio, contact">
       <option name="closed" value="true" />
@@ -166,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761680483738</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="CHANGE: CV file&#10;FIX: logo">
+      <option name="closed" value="true" />
+      <created>1761681232375</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1761681232375</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +187,7 @@
     <MESSAGE value="Update for the Deploy" />
     <MESSAGE value="Hide MobAlbum component for the desktop" />
     <MESSAGE value="IMPROVEMENT: button experience was added in the home page&#10;FIX: project link, responsive on mobile/tablet&#10;NEW UI: was added likedIn link and added my CV file" />
-    <option name="LAST_COMMIT_MESSAGE" value="IMPROVEMENT: button experience was added in the home page&#10;FIX: project link, responsive on mobile/tablet&#10;NEW UI: was added likedIn link and added my CV file" />
+    <MESSAGE value="CHANGE: CV file&#10;FIX: logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="CHANGE: CV file&#10;FIX: logo" />
   </component>
 </project>
