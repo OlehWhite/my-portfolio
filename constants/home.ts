@@ -1,5 +1,5 @@
 export const HERO = {
-  hello: "Hi, I'm Oleh Bilostotkyi",
+  hello: "Hi, I'm Oleh Bilostotskyi",
   technologies: {
     frontend: "Front End Developer",
     webflow: "Webflow Specialist",
