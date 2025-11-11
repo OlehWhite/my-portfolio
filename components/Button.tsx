@@ -6,9 +6,16 @@ interface Props {
   children: ReactNode;
   href?: string;
   download?: boolean;
+  onClick?: () => void;
 }
 
-const Button = ({ href, color = "main", children, download }: Props) => {
+const Button = ({
+  href,
+  color = "main",
+  children,
+  download,
+  onClick,
+}: Props) => {
   const bgTemplate: ITemplate = {
     main: "bg-primary",
     secondary: "bg-light",
@@ -21,6 +28,7 @@ const Button = ({ href, color = "main", children, download }: Props) => {
 
   return (
     <a
+      onClick={onClick}
       href={href}
       download={download}
       className={`

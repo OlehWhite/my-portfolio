@@ -5,6 +5,7 @@ import { HERO } from "@/constants/home";
 import Button from "@/components/Button";
 import { SOCIAL_MEDIAS } from "@/constants/socials-medias";
 import Link from "next/link";
+import IntroVideo from "@/components/home/IntroVideo";
 
 export const generateMetadata = async () => ({
   title: "Bilostotskyi Oleh - Website",
@@ -31,6 +32,7 @@ const HomePage = () => {
               {HERO.technologies.webflow}
             </span>
           </h2>
+
           {HERO.text.map((text, index) => (
             <p key={index} className="text-base md:text-lg">
               {text}
@@ -45,6 +47,8 @@ const HomePage = () => {
             >
               My Experience
             </Button>
+
+            <IntroVideo />
           </div>
 
           <div className="hidden md:flex gap-3 mt-[100px]">
