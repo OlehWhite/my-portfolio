@@ -17,9 +17,11 @@ const Case = ({ project }: Props) => {
             <video
               className={"w-full max-w-[300px] md:max-w-[650px]"}
               src={project.video}
-              autoPlay
               controls
-            ></video>
+              playsInline
+              preload="metadata"
+              poster={project.images?.[0]}
+            />
           ) : (
             <div className="w-[500px]" />
           )}

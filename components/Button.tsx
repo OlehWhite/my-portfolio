@@ -34,7 +34,7 @@ const Button = ({
       className={`
         ${bgTemplate[color]} ${textTemplate[color]} 
         no-underline
-        border-0 rounded-xl px-3 py-2 text-xl transition duration-300 ease-in-out cursor-pointer
+        border-0 rounded-xl px-3 py-2 text-base md:text-xl transition duration-300 ease-in-out cursor-pointer
         hover:bg-blue-200 `}
     >
       {children}
