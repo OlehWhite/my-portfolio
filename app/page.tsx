@@ -42,6 +42,7 @@ const HomePage = () => {
           <div className="flex gap-6 justify-center md:justify-start">
             <Button href="mailto:oleg22098d@gmail.com">Let&#39;s Talk</Button>
             <Button
+              color="secondary"
               href="/files/CV_Bilostotskyi_Oleh_Front_End_React_2025.pdf"
               download
             >

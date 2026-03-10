@@ -1,5 +1,3 @@
-"use client";
-
 import { IPortfolio } from "@/types/portfolio.types";
 import Album from "@/components/case/Album";
 import MobAlbum from "@/components/case/MobAlbum";
@@ -11,11 +9,12 @@ interface Props {
 const Case = ({ project }: Props) => {
   return (
     <div className="flex flex-col gap-12">
-      <div className="flex flex-col-reverse gap-6 md:items-start xl:flex-row">
-        <div className="flex flex-col gap-3">
+      {/* Блок з відео та скілами — float, щоб текст обтікав */}
+      <div className="overflow-hidden">
+        <div className="float-none w-full max-w-[300px] md:float-left md:max-w-[420px] xl:max-w-[500px] md:mr-6 mb-6 flex flex-col gap-3 shrink-0">
           {project.video ? (
             <video
-              className={"w-full max-w-[300px] md:max-w-[650px]"}
+              className="w-full"
               src={project.video}
               controls
               playsInline
@@ -23,14 +22,14 @@ const Case = ({ project }: Props) => {
               poster={project.images?.[0]}
             />
           ) : (
-            <div className="w-[500px]" />
+            <div className="w-full aspect-video rounded-lg bg-secondary/20" />
           )}
 
           <div className="flex flex-wrap gap-3">
             {project.skills.map((skill, index) => (
               <span
                 key={index}
-                className="fpx-5 px-4 py-2 m-0 text-sm text-light rounded-lg bg-[#FFFFFF2F]"
+                className="px-4 py-2 m-0 text-sm text-light rounded-lg bg-[#FFFFFF2F]"
               >
                 {skill}
               </span>
@@ -38,11 +37,13 @@ const Case = ({ project }: Props) => {
           </div>
         </div>
 
-        <div>
-          <h2 className="m-0">{project.title}</h2>
-          <div className="custom-scroll h-[330px] overflow-y-scroll">
+        <div className="min-w-0">
+          <h2 className="m-0 mb-4 text-xl md:text-2xl">{project.title}</h2>
+          <div className="text-light/90 text-base md:text-lg leading-relaxed space-y-3">
             {project.description.map((el, index) => (
-              <p key={index}>{el}</p>
+              <p key={index} className="m-0">
+                {el}
+              </p>
             ))}
           </div>
         </div>

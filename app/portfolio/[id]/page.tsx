@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props) {
-  const { id } = await params; // <-- await here
+  const { id } = await params;
   const project = PORTFOLIO.find((p) => p.id === id);
 
   if (!project) {
