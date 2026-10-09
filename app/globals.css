@@ -1,96 +1,74 @@
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
 
-html {
+:root {
+  --color-canvas: #f7f6f2;
+  --color-ink: #111318;
+  --color-accent: #155eef;
+  --color-accent-soft: #dce6f8;
+  --color-muted: #646873;
+  --color-line: #e5e5e0;
+  --color-card: #ffffff;
+  --color-inverse: #101216;
+}
+
+@layer base {
+  html {
     height: 100%;
-    background: linear-gradient(
-            1deg,
-            rgba(0, 166, 255, 1) 0%,
-            rgba(0, 136, 208, 1) 0%,
-            rgba(0, 84, 128, 1) 19%,
-            rgba(0, 41, 79, 1) 37%,
-            rgba(0, 0, 0, 1) 66%
-    ) fixed;
-    background-size: cover;
-
-    /* Це для Firefox */
-    scrollbar-color: rgba(180, 180, 180, 0.5) transparent;
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    scrollbar-gutter: stable;
+    scrollbar-color: rgba(17, 19, 24, 0.28) transparent;
     scrollbar-width: thin;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-geist-sans), sans-serif;
+  }
+
+  ::selection {
+    background: var(--color-accent-soft);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
 }
 
-body {
-    padding: 40px 0 100px 0;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    color: white;
-    overflow-y: scroll; /* Щоб scrollbar завжди був */
-}
-
-/* === Chrome, Edge, Safari === */
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent; /* прозорий фон */
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(200, 200, 200, 0.35); /* сірий прозорий */
-    border-radius: 10px;
-    border: 2px solid transparent; /* робить “повітря” навколо */
-    background-clip: content-box;
-    transition: background-color 0.3s ease;
+  background-color: rgba(17, 19, 24, 0.22);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.6);
-}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-/* Для горизонтальних */
-::-webkit-scrollbar-corner {
-    background: transparent;
-}
-.perspective {
-    perspective: 1000px;
-}
-
-.tilt {
-    position: relative;
-    transform: rotateY(55deg) rotateX(0deg);
-    transition: transform 1s ease;
-}
-
-.tilt::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(120, 120, 120, 0.52);
-    border-radius: 12px;
-    transition: background 0.5s ease;
-    z-index: 2;
-}
-
-/* Hover-ефект */
-.tilt:hover {
-    cursor: pointer;
-    transform: rotateY(55deg) rotateX(0deg) translateY(-200px) scale(1.03);
-}
-
-.tilt:hover::before {
-    background: rgba(120, 120, 120, 0);
-}
-
-/* === Адаптація під мобільні === */
-@media (max-width: 768px) {
-    .tilt {
-        transform: rotateY(20deg);
-    }
-
-    .tilt:hover {
-        transform: rotateY(20deg) translateY(-50px) scale(1.02);
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -1,43 +1,61 @@
 "use client";
 
-import { useState } from "react";
-import Button from "@/components/Button";
+import { useEffect, useState } from "react";
 import { HERO } from "@/constants/home";
+import { useLocale } from "@/components/locale/LocaleProvider";
+import { getMessages } from "@/constants/messages";
 
 const IntroVideo = () => {
-  const [open, setOpen] = useState<boolean>(false);
+  const t = getMessages(useLocale());
+  const [open, setOpen] = useState(false);
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
 
   return (
     <>
-      <Button color="secondary" onClick={handleOpen}>
-        Intro video
-      </Button>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="bg-transparent p-0 text-sm text-muted underline-offset-4 hover:text-ink hover:underline"
+      >
+        {t.hero.watchIntro}
+      </button>
 
       {open && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-          <div className="relative w-[90%] md:w-[800px] aspect-video bg-black rounded-xl shadow-xl">
-            <iframe
-              src={HERO.intro}
-              title="Intro Video"
-              className="w-full h-full rounded-xl"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-            ></iframe>
-
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-inverse/80 p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label={t.hero.introLabel}
+          onClick={() => setOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-3xl"
+            onClick={(event) => event.stopPropagation()}
+          >
             <button
-              onClick={handleClose}
-              className="absolute -top-12 right-0 text-white text-3xl font-bold hover:text-red-500 transition"
+              type="button"
+              onClick={() => setOpen(false)}
+              className="absolute -top-10 right-0 text-sm text-white"
             >
-              ×
+              {t.hero.closeIntro}
             </button>
+            <div className="aspect-video overflow-hidden rounded-xl bg-black">
+              <iframe
+                src={HERO.intro}
+                title={t.hero.introLabel}
+                className="h-full w-full"
+                allow="encrypted-media"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       )}

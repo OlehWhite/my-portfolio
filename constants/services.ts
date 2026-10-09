@@ -72,3 +72,56 @@ export const SERVICES = [
     ],
   },
 ];
+
+export const SERVICE_TAGS: Record<number, string[]> = {
+  0: ["Webflow", "Figma", "CMS", "SEO"],
+  1: ["React", "Next.js", "TypeScript", "Material UI"],
+};
+
+export const CAPABILITIES = [
+  {
+    title: "Webflow development",
+    detail:
+      "Pixel-perfect layouts, CMS, interactions, and a Client-First structure clients can maintain.",
+  },
+  {
+    title: "Websites",
+    detail:
+      "Landing pages, blogs, and corporate sites, including moves from WordPress or Wix.",
+  },
+  {
+    title: "UI implementation",
+    detail: "Figma designs built into responsive interfaces with React and Next.js.",
+  },
+  {
+    title: "Admin panels",
+    detail: "Dashboards and content tools with API integration and clear workflows.",
+  },
+  {
+    title: "Maintenance & support",
+    detail: "Post-launch fixes, updates, and performance work after the site is live.",
+  },
+];
+
+export const PROCESS = [
+  {
+    step: "01",
+    title: "Discovery",
+    text: "We discuss your goals, requirements, and timeline so the brief is clear before building starts.",
+  },
+  {
+    step: "02",
+    title: "Planning",
+    text: "I align the solution, tech stack, structure, and milestones with the design and constraints you already have.",
+  },
+  {
+    step: "03",
+    title: "Development",
+    text: "I implement the interface, integrations, and responsive behavior, with room for review along the way.",
+  },
+  {
+    step: "04",
+    title: "Launch & Support",
+    text: "I test, deploy, hand the project over, and stay available for fixes and updates after launch.",
+  },
+];

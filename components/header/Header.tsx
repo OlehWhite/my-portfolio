@@ -1,16 +1,20 @@
+import { Suspense } from "react";
 import Logo from "@/components/header/Logo";
 import Nav from "@/components/header/Nav";
-import { ENavLinks } from "@/types/nav.types";
+import LanguageSwitch from "@/components/locale/LanguageSwitch";
 
-interface Props {
-  page: ENavLinks;
-}
-
-const Header = ({ page }: Props) => {
+const Header = () => {
   return (
-    <header className="flex-wrap md:flex-nowrap flex justify-between">
-      <Logo />
-      <Nav page={page} />
+    <header className="sticky top-0 z-40 border-b border-line/80 bg-canvas/90 backdrop-blur-md">
+      <div className="relative mx-auto flex h-[72px] max-w-[1200px] items-center justify-between gap-4 px-5 md:px-8">
+        <Logo />
+        <div className="flex items-center gap-3 sm:gap-5">
+          <Suspense fallback={null}>
+            <LanguageSwitch />
+          </Suspense>
+          <Nav />
+        </div>
+      </div>
     </header>
   );
 };

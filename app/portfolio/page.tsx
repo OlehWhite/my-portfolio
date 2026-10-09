@@ -1,52 +1,46 @@
-"use client";
-
-import React, { useState } from "react";
+import type { Metadata } from "next";
 import MainLayout from "@/layouts/MainLayout";
-import { ENavLinks } from "@/types/nav.types";
-import { PORTFOLIO } from "@/constants/portfolios";
-import Project from "@/components/portfolio/Project";
-import ReactPaginate from "react-paginate";
-import AnimationLayout from "@/layouts/AnimationLayout";
+import PortfolioBrowser from "@/components/portfolio/PortfolioBrowser";
+import { getMessages } from "@/constants/messages";
+import { withLang } from "@/lib/locale";
+import { getLocale } from "@/lib/request-locale";
 
-const ITEMS_PER_PAGE = 5;
+export const generateMetadata = async (): Promise<Metadata> => {
+  const locale = await getLocale();
+  const t = getMessages(locale);
 
-const PortfolioPage = () => {
-  const [currentItems, setCurrentItems] = useState(
-    PORTFOLIO.slice(0, ITEMS_PER_PAGE),
-  );
-
-  const handlePageClick = (event: { selected: number }) => {
-    const start = event.selected * ITEMS_PER_PAGE;
-    setCurrentItems(PORTFOLIO.slice(start, start + ITEMS_PER_PAGE));
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  return {
+    title: t.meta.portfolioTitle,
+    description: t.meta.portfolioDescription,
+    alternates: {
+      canonical: withLang("/portfolio", locale),
+      languages: {
+        en: withLang("/portfolio", "en"),
+        uk: withLang("/portfolio", "ua"),
+      },
+    },
+    openGraph: {
+      title: t.meta.portfolioTitle,
+      description: t.meta.portfolioDescription,
+    },
   };
-
-  return (
-    <MainLayout page={ENavLinks.PORTFOLIO}>
-      <div className="flex flex-col gap-10">
-        {currentItems.map((project) => (
-          <AnimationLayout key={project.id} delay={0.3}>
-            <Project project={project} />
-          </AnimationLayout>
-        ))}
-      </div>
-
-      <ReactPaginate
-        previousLabel={"<"}
-        nextLabel={">"}
-        breakLabel="..."
-        pageCount={Math.ceil(PORTFOLIO.length / ITEMS_PER_PAGE)}
-        onPageChange={handlePageClick}
-        containerClassName="flex justify-center gap-2 mt-6 list-none p-0"
-        pageClassName="px-3 py-1 border rounded cursor-pointer"
-        activeClassName="bg-primary text-white"
-        previousClassName="px-3 py-1 border rounded cursor-pointer"
-        nextClassName="px-3 py-1 border rounded cursor-pointer"
-        breakClassName="px-3 py-1"
-        disabledClassName="opacity-50 cursor-not-allowed"
-      />
-    </MainLayout>
-  );
 };
 
-export default PortfolioPage;
+export default async function PortfolioPage() {
+  const t = getMessages(await getLocale());
+
+  return (
+    <MainLayout>
+      <div className="grid items-end gap-6 md:grid-cols-[1.25fr_0.75fr]">
+        <h1 className="m-0 text-4xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl">
+          {t.portfolio.titleBefore}{" "}
+          <span className="text-accent">{t.portfolio.titleAccent}</span>
+        </h1>
+        <p className="m-0 text-base leading-relaxed text-muted md:text-lg">
+          {t.portfolio.intro}
+        </p>
+      </div>
+      <PortfolioBrowser />
+    </MainLayout>
+  );
+}

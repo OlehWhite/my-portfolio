@@ -1,7 +1,7 @@
 export const HERO = {
   hello: "Hi, I'm Oleh Bilostotskyi",
   technologies: {
-    frontend: "Middle Full Stack Engineer",
+    frontend: "Full Stack Engineer",
     webflow: "Webflow Specialist",
   },
   text: [
@@ -11,3 +11,16 @@ export const HERO = {
   ],
   intro: "https://www.youtube.com/embed/zp4meXqVCIg?autoplay=1",
 };
+
+export const STACK = [
+  "React",
+  "Next.js",
+  "Node.js",
+  "JavaScript",
+  "TypeScript",
+  "HTML",
+  "CSS",
+  "Webflow",
+];
+
+export const FEATURED_IDS = ["27-nerds", "damka-systems", "tap-2-dine"];

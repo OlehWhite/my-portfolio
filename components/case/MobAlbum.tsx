@@ -1,23 +1,32 @@
+"use client";
+
 import Image from "next/image";
 
 interface Props {
   album: string[];
+  alt: string;
+  onSelect?: (index: number) => void;
 }
 
-const MobAlbum = ({ album }: Props) => {
+const MobAlbum = ({ album, alt, onSelect }: Props) => {
   return (
-    <div className="flex items-center justify-center flex-wrap gap-3 mt-6 xl:hidden">
+    <div className="grid gap-4 sm:grid-cols-2">
       {album.map((picture, index) => (
-        <div key={index}>
+        <button
+          key={`${picture}-${index}`}
+          type="button"
+          onClick={() => onSelect?.(index)}
+          aria-label={`${alt} screenshot ${index + 1}`}
+          className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-line bg-[#eef1f4] p-0"
+        >
           <Image
             src={picture}
-            width={600}
-            height={0}
-            alt={picture}
-            title={picture}
-            className="w-[350px] md:w-[600px] h-auto object-cover rounded-xl shadow-lg"
+            alt={`${alt} screenshot ${index + 1}`}
+            fill
+            sizes="(max-width: 640px) 100vw, 560px"
+            className="object-contain p-2"
           />
-        </div>
+        </button>
       ))}
     </div>
   );

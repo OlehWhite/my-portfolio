@@ -1,92 +1,132 @@
+import type { Metadata } from "next";
 import MainLayout from "@/layouts/MainLayout";
-import { ENavLinks } from "@/types/nav.types";
 import ContactForm from "@/components/contact/ContactForm";
-import Link from "next/link";
+import { SITE } from "@/constants/site";
+import { SOCIAL_MEDIAS } from "@/constants/socials-medias";
+import { getMessages } from "@/constants/messages";
+import { withLang } from "@/lib/locale";
+import { getLocale } from "@/lib/request-locale";
 
-const CV_PATH = "/files/CV_Bilostotskyi_Oleh_Front_End_React_2026.pdf";
+const LABELS: Record<string, string> = {
+  LinkedIn: "LinkedIn",
+  Git: "GitHub",
+};
 
-const ContactPage = () => {
+function profileName(title: string, link: string) {
+  if (title === "LinkedIn") return SITE.name;
+  const slug = link.split("/").filter(Boolean).pop();
+  return slug || LABELS[title] || title;
+}
+
+export const generateMetadata = async (): Promise<Metadata> => {
+  const locale = await getLocale();
+  const t = getMessages(locale);
+
+  return {
+    title: t.meta.contactTitle,
+    description: t.meta.contactDescription,
+    alternates: {
+      canonical: withLang("/contact", locale),
+      languages: {
+        en: withLang("/contact", "en"),
+        uk: withLang("/contact", "ua"),
+      },
+    },
+    openGraph: {
+      title: t.meta.contactTitle,
+      description: t.meta.contactDescription,
+    },
+  };
+};
+
+const ContactPage = async () => {
+  const t = getMessages(await getLocale()).contact;
+
   return (
-    <MainLayout page={ENavLinks.CONTACT}>
-      <section className="w-full max-w-5xl mx-auto">
-        <h1 className="text-2xl md:text-4xl font-semibold text-light mb-2">
-          Contact
-        </h1>
-        <p className="text-secondary text-base md:text-lg mb-10">
-          Get in touch or send your project details
-        </p>
+    <MainLayout>
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-14">
+        <div className="order-1">
+          <p className="m-0 text-xs font-medium uppercase tracking-[0.16em] text-muted">
+            {t.eyebrow}
+          </p>
+          <h1 className="mb-0 mt-3 text-4xl font-semibold leading-[1.05] tracking-tight text-ink md:text-6xl">
+            {t.titleBefore} <span className="text-accent">{t.titleAccent}</span>
+          </h1>
+          <p className="mt-5 max-w-md text-base leading-relaxed text-muted">
+            {t.intro}
+          </p>
 
-        <div className="flex flex-col gap-10 lg:gap-14 xl:flex-row xl:items-start">
-          {/* Left: contact info + form */}
-          <div className="flex flex-col gap-10 flex-1 min-w-0">
-            <div className="rounded-2xl border border-secondary/20 bg-[#001a2e] p-6 md:p-8">
-              <h2 className="text-lg font-semibold text-light mb-4">
-                Reach me directly
-              </h2>
-              <ul className="space-y-4">
-                <li>
-                  <span className="text-secondary text-sm block mb-0.5">Email</span>
-                  <a
-                    href="mailto:oleg220298d@gmail.com"
-                    className="text-primary hover:underline text-lg"
-                  >
-                    oleg220298d@gmail.com
-                  </a>
-                </li>
-                <li>
-                  <span className="text-secondary text-sm block mb-0.5">LinkedIn</span>
-                  <a
-                    href="https://www.linkedin.com/in/oleh-bilostotskyi-a535a921b/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline text-lg"
-                  >
-                    Oleh Bilostotskyi
-                  </a>
-                </li>
-                <li>
-                  <span className="text-secondary text-sm block mb-0.5">CV</span>
-                  <Link
-                    href={CV_PATH}
-                    download
-                    className="text-primary hover:underline text-lg inline-flex items-center gap-1"
-                  >
-                    Download CV
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          <ul className="m-0 mt-8 list-none space-y-5 p-0">
+            <li>
+              <span className="mb-1 block text-xs font-medium uppercase tracking-[0.14em] text-muted">
+                {t.email}
+              </span>
+              <a
+                href={`mailto:${SITE.email}`}
+                className="text-lg text-ink no-underline hover:text-accent"
+              >
+                {SITE.email}
+              </a>
+            </li>
+            {SOCIAL_MEDIAS.map((item) => (
+              <li key={item.link}>
+                <span className="mb-1 block text-xs font-medium uppercase tracking-[0.14em] text-muted">
+                  {LABELS[item.title] ?? item.title}
+                </span>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg text-ink no-underline hover:text-accent"
+                >
+                  {profileName(item.title, item.link)}
+                </a>
+              </li>
+            ))}
+            <li>
+              <span className="mb-1 block text-xs font-medium uppercase tracking-[0.14em] text-muted">
+                {t.cv}
+              </span>
+              <a
+                href={SITE.cv}
+                download
+                className="text-lg text-ink no-underline hover:text-accent"
+              >
+                {t.downloadCv}
+              </a>
+            </li>
+          </ul>
+        </div>
 
-            <div className="rounded-2xl border border-secondary/20 bg-[#001a2e] p-6 md:p-8">
-              <h2 className="text-lg font-semibold text-light mb-5">
-                Send a message
-              </h2>
+        <div className="order-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+          <div className="rounded-2xl border border-line bg-card p-6 md:p-8 lg:sticky lg:top-24">
+            <h2 className="m-0 text-lg font-semibold text-ink">{t.sendTitle}</h2>
+            <div className="mt-6">
               <ContactForm />
             </div>
           </div>
+        </div>
 
-          {/* Right: CV preview */}
-          <div className="xl:w-[480px] xl:shrink-0">
-            <div className="rounded-2xl border border-secondary/20 bg-[#001a2e] p-4 overflow-hidden sticky top-6">
-              <div className="flex items-center justify-between mb-3">
-                <h2 className="text-lg font-semibold text-light m-0">CV preview</h2>
-                <Link
-                  href={CV_PATH}
-                  download
-                  className="text-sm text-primary hover:underline"
-                >
-                  Download
-                </Link>
-              </div>
-              <iframe
-                src={CV_PATH}
-                title="CV preview"
-                className="w-full h-[500px] md:h-[600px] rounded-lg border border-white/10 bg-white"
-              />
+        <div className="order-3">
+          <div className="overflow-hidden rounded-2xl border border-line bg-card p-4">
+            <div className="mb-3 flex items-center justify-between gap-3">
+              <h2 className="m-0 text-lg font-semibold text-ink">{t.cvPreview}</h2>
+              <a
+                href={SITE.cv}
+                download
+                className="text-sm text-accent no-underline hover:underline"
+              >
+                {t.download}
+              </a>
             </div>
+            <iframe
+              src={SITE.cv}
+              title={t.cvPreview}
+              className="h-[480px] w-full rounded-lg border border-line bg-white md:h-[640px]"
+            />
           </div>
         </div>
-      </section>
+      </div>
     </MainLayout>
   );
 };

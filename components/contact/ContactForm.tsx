@@ -1,54 +1,56 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Button from "@/components/Button";
+import { useLocale } from "@/components/locale/LocaleProvider";
+import { getMessages, Messages } from "@/constants/messages";
+
+type FormCopy = Messages["form"];
 
 const MAX_FILE_SIZE_MB = 5;
 const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024;
 const MAX_MESSAGE_LENGTH = 100;
-const ACCEPTED_FILE_TYPES =
-  ".pdf,.doc,.docx,image/jpeg,image/png,image/webp";
 
-type FormErrors = Partial<Record<"name" | "email" | "phone" | "message" | "file", string>>;
+type FormErrors = Partial<
+  Record<"name" | "email" | "phone" | "message" | "file", string>
+>;
 
-function validateName(value: string): string | null {
+function validateName(value: string, form: FormCopy): string | null {
   const trimmed = value.trim();
-  if (!trimmed) return "Name is required";
-  if (trimmed.length < 2) return "At least 2 characters";
+  if (!trimmed) return form.nameRequired;
+  if (trimmed.length < 2) return form.nameShort;
   return null;
 }
 
-function validateEmail(value: string): string | null {
+function validateEmail(value: string, form: FormCopy): string | null {
   const trimmed = value.trim();
-  if (!trimmed) return "Email is required";
+  if (!trimmed) return form.emailRequired;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(trimmed)) return "Enter a valid email";
+  if (!emailRegex.test(trimmed)) return form.emailInvalid;
   return null;
 }
 
-function validatePhone(value: string): string | null {
+function validatePhone(value: string, form: FormCopy): string | null {
   const trimmed = value.replace(/\s/g, "");
-  if (!trimmed) return "Phone is required";
+  if (!trimmed) return form.phoneRequired;
   const phoneRegex = /^[\d+\-()]{10,20}$/;
-  if (!phoneRegex.test(trimmed)) return "Enter a valid phone number (10–20 digits)";
+  if (!phoneRegex.test(trimmed)) return form.phoneInvalid;
   return null;
 }
 
-function validateMessage(value: string): string | null {
-  if (value.length > MAX_MESSAGE_LENGTH) {
-    return `Max ${MAX_MESSAGE_LENGTH} characters`;
-  }
+function validateMessage(value: string, form: FormCopy): string | null {
+  if (value.length > MAX_MESSAGE_LENGTH) return form.messageLong;
   return null;
 }
 
-function validateFile(file: File | null): string | null {
+function validateFile(file: File | null, form: FormCopy): string | null {
   if (!file) return null;
-  if (file.size > MAX_FILE_SIZE_BYTES) {
-    return `Max file size is ${MAX_FILE_SIZE_MB}MB`;
-  }
+  if (file.size > MAX_FILE_SIZE_BYTES) return form.fileLarge;
   return null;
 }
 
 export default function ContactForm() {
+  const form = getMessages(useLocale()).form;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -56,28 +58,59 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState<FormErrors>({});
   const [apiError, setApiError] = useState<string | null>(null);
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">(
+    "idle",
+  );
 
   const endpoint = process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT;
+
+  useEffect(() => {
+    setErrors((prev) => {
+      if (Object.keys(prev).length === 0) return prev;
+      const next: FormErrors = {};
+      if (prev.name) {
+        const err = validateName(name, form);
+        if (err) next.name = err;
+      }
+      if (prev.email) {
+        const err = validateEmail(email, form);
+        if (err) next.email = err;
+      }
+      if (prev.phone) {
+        const err = validatePhone(phone, form);
+        if (err) next.phone = err;
+      }
+      if (prev.message) {
+        const err = validateMessage(message, form);
+        if (err) next.message = err;
+      }
+      if (prev.file) {
+        const err = validateFile(file, form);
+        if (err) next.file = err;
+      }
+      return next;
+    });
+    setApiError(null);
+  }, [form, name, email, phone, message, file]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setApiError(null);
     const newErrors: FormErrors = {};
 
-    const nameErr = validateName(name);
+    const nameErr = validateName(name, form);
     if (nameErr) newErrors.name = nameErr;
 
-    const emailErr = validateEmail(email);
+    const emailErr = validateEmail(email, form);
     if (emailErr) newErrors.email = emailErr;
 
-    const phoneErr = validatePhone(phone);
+    const phoneErr = validatePhone(phone, form);
     if (phoneErr) newErrors.phone = phoneErr;
 
-    const messageErr = validateMessage(message);
+    const messageErr = validateMessage(message, form);
     if (messageErr) newErrors.message = messageErr;
 
-    const fileErr = validateFile(file);
+    const fileErr = validateFile(file, form);
     if (fileErr) newErrors.file = fileErr;
 
     setErrors(newErrors);
@@ -85,7 +118,7 @@ export default function ContactForm() {
 
     if (!endpoint) {
       setStatus("error");
-      setApiError("Form endpoint not configured. Add NEXT_PUBLIC_CONTACT_FORM_ENDPOINT.");
+      setApiError(form.endpointMissing);
       return;
     }
 
@@ -117,143 +150,142 @@ export default function ContactForm() {
       } else {
         const data = await res.json().catch(() => ({}));
         setStatus("error");
-        const msg = data.error || "Something went wrong. Try again.";
+        const msg = data.error || form.genericError;
         setApiError(
           msg.toLowerCase().includes("file upload")
-            ? `${msg} Remove the file and try again, or use a Formspree plan that allows file uploads.`
-            : msg
+            ? `${msg} ${form.fileUpload}`
+            : msg,
         );
       }
     } catch {
       setStatus("error");
-      setApiError("Network error. Try again later.");
+      setApiError(form.network);
     }
   };
 
   const inputBase =
-    "w-full rounded-xl border-2 bg-dark/80 text-light placeholder:text-secondary/70 px-4 py-3 text-base outline-none transition-colors focus:border-primary";
+    "w-full rounded-lg border bg-card text-ink placeholder:text-muted/70 px-4 py-3 text-base outline-none transition-colors focus:border-accent";
 
-  const inputError = "border-red-500/70 focus:border-red-500";
+  const inputError = "border-red-600 focus:border-red-600";
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5 box-border">
+    <form onSubmit={handleSubmit} className="space-y-5" noValidate>
       <div>
-        <label htmlFor="contact-name" className="block text-sm font-medium text-secondary mb-1.5">
-          Name *
+        <label
+          htmlFor="contact-name"
+          className="mb-1.5 block text-sm font-medium text-ink"
+        >
+          {form.name}
         </label>
         <input
           id="contact-name"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className={`${inputBase} ${errors.name ? inputError : "border-secondary/40"} box-border`}
-          placeholder="Your name"
+          className={`${inputBase} ${errors.name ? inputError : "border-line"}`}
+          placeholder={form.namePlaceholder}
           autoComplete="name"
+          aria-invalid={!!errors.name}
         />
         {errors.name && (
-          <p className="mt-1 text-sm text-red-400">{errors.name}</p>
+          <p className="mt-1 text-sm text-red-700">{errors.name}</p>
         )}
       </div>
 
       <div>
-        <label htmlFor="contact-email" className="block text-sm font-medium text-secondary mb-1.5">
-          Email *
+        <label
+          htmlFor="contact-email"
+          className="mb-1.5 block text-sm font-medium text-ink"
+        >
+          {form.email}
         </label>
         <input
           id="contact-email"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className={`${inputBase} ${errors.email ? inputError : "border-secondary/40"} box-border`}
-          placeholder="your@email.com"
+          className={`${inputBase} ${errors.email ? inputError : "border-line"}`}
+          placeholder={form.emailPlaceholder}
           autoComplete="email"
+          aria-invalid={!!errors.email}
         />
         {errors.email && (
-          <p className="mt-1 text-sm text-red-400">{errors.email}</p>
+          <p className="mt-1 text-sm text-red-700">{errors.email}</p>
         )}
       </div>
 
       <div>
-        <label htmlFor="contact-phone" className="block text-sm font-medium text-secondary mb-1.5">
-          Phone *
+        <label
+          htmlFor="contact-phone"
+          className="mb-1.5 block text-sm font-medium text-ink"
+        >
+          {form.phone}
         </label>
         <input
           id="contact-phone"
           type="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          className={`${inputBase} ${errors.phone ? inputError : "border-secondary/40"} box-border`}
-          placeholder="+1 234 567 8900"
+          className={`${inputBase} ${errors.phone ? inputError : "border-line"}`}
+          placeholder={form.phonePlaceholder}
           autoComplete="tel"
+          aria-invalid={!!errors.phone}
         />
         {errors.phone && (
-          <p className="mt-1 text-sm text-red-400">{errors.phone}</p>
+          <p className="mt-1 text-sm text-red-700">{errors.phone}</p>
         )}
       </div>
 
       <div>
-        <label htmlFor="contact-message" className="block text-sm font-medium text-secondary mb-1.5">
-          Message (max {MAX_MESSAGE_LENGTH} characters)
+        <label
+          htmlFor="contact-message"
+          className="mb-1.5 block text-sm font-medium text-ink"
+        >
+          {form.message}
         </label>
         <textarea
           id="contact-message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           maxLength={MAX_MESSAGE_LENGTH}
-          rows={3}
-          className={`${inputBase} resize-none box-border ${errors.message ? inputError : "border-secondary/40"}`}
-          placeholder="Brief description of your project or question..."
+          rows={4}
+          className={`${inputBase} resize-none ${errors.message ? inputError : "border-line"}`}
+          placeholder={form.messagePlaceholder}
           autoComplete="off"
+          aria-invalid={!!errors.message}
         />
         {errors.message ? (
-          <p className="mt-1 text-sm text-red-400">{errors.message}</p>
+          <p className="mt-1 text-sm text-red-700">{errors.message}</p>
         ) : (
-          <p className="mt-1 text-sm text-secondary">{message.length}/{MAX_MESSAGE_LENGTH}</p>
+          <p className="mt-1 text-sm text-muted">
+            {message.length}/{MAX_MESSAGE_LENGTH}
+          </p>
         )}
       </div>
 
-      {/* <div>
-        <label htmlFor="contact-file" className="block text-sm font-medium text-secondary mb-1.5">
-          File (optional, max {MAX_FILE_SIZE_MB}MB)
-        </label>
-        <input
-          id="contact-file"
-          type="file"
-          accept={ACCEPTED_FILE_TYPES}
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-          className={`${inputBase} py-2 file:mr-3 file:rounded-lg file:border-0 file:bg-primary file:px-3 file:py-1.5 file:text-light file:text-sm ${errors.file ? inputError : "border-secondary/40"}`}
-        />
-        {file && (
-          <p className="mt-1 text-sm text-secondary">
-            {file.name} ({(file.size / 1024).toFixed(1)} KB)
-          </p>
-        )}
-        {errors.file && (
-          <p className="mt-1 text-sm text-red-400">{errors.file}</p>
-        )}
-      </div> */}
-
       {status === "success" && (
-        <p className="rounded-xl bg-primary/20 border border-primary/50 text-primary px-4 py-3 text-sm">
-          Message sent. I’ll get back to you soon.
+        <p className="rounded-lg border border-emerald-600/30 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
+          {form.success}
         </p>
       )}
       {apiError && (
-        <p className="rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 px-4 py-3 text-sm">
+        <p className="rounded-lg border border-red-600/30 bg-red-50 px-4 py-3 text-sm text-red-800">
           {apiError}
         </p>
       )}
-      {status === "error" && !apiError && !errors.name && !errors.email && !errors.phone && !errors.message && !errors.file && (
-        <p className="text-sm text-red-400">Something went wrong. Try again.</p>
-      )}
+      {status === "error" &&
+        !apiError &&
+        !errors.name &&
+        !errors.email &&
+        !errors.phone &&
+        !errors.message &&
+        !errors.file && (
+          <p className="text-sm text-red-700">{form.genericError}</p>
+        )}
 
-      <button
-        type="submit"
-        disabled={status === "sending"}
-        className="w-full rounded-xl border-2 border-primary bg-primary px-4 py-3 text-base font-medium text-light shadow-lg shadow-primary/25 transition-all hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {status === "sending" ? "Sending…" : "Send message"}
-      </button>
+      <Button type="submit" disabled={status === "sending"} className="w-full">
+        {status === "sending" ? form.sending : form.submit}
+      </Button>
     </form>
   );
 }

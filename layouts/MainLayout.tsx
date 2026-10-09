@@ -1,23 +1,29 @@
 import { ReactNode } from "react";
 import Header from "@/components/header/Header";
-import { ENavLinks } from "@/types/nav.types";
 import Footer from "@/components/footer/Footer";
 import AnimationLayout from "@/layouts/AnimationLayout";
+import { LocaleProvider } from "@/components/locale/LocaleProvider";
+import { getLocale } from "@/lib/request-locale";
 
 interface Props {
   children: ReactNode;
-  page: ENavLinks;
 }
 
-const MainLayout = ({ page, children }: Props) => {
+const MainLayout = async ({ children }: Props) => {
+  const locale = await getLocale();
+
   return (
-    <AnimationLayout>
-      <div className="flex flex-col gap-2 md:gap-6 overflow-hidden xl:overflow-visible bg-dark p-5 md:p-10 rounded-[30px] shadow-[0_10px_30px_rgba(0,0,0,0.5)] mx-5">
-        <Header page={page} />
-        <main>{children}</main>
+    <LocaleProvider locale={locale}>
+      <div className="flex min-h-screen flex-col bg-canvas text-ink">
+        <Header />
+        <AnimationLayout>
+          <main className="mx-auto w-full max-w-[1200px] flex-1 px-5 py-12 md:px-8 md:py-16">
+            {children}
+          </main>
+        </AnimationLayout>
         <Footer />
       </div>
-    </AnimationLayout>
+    </LocaleProvider>
   );
 };
 

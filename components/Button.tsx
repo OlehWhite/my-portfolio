@@ -1,13 +1,28 @@
+"use client";
+
 import { ReactNode } from "react";
-import { ITemplate, TemplateKey } from "@/types/globals.types";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { useLocale } from "@/components/locale/LocaleProvider";
+import { withLang } from "@/lib/locale";
 
 interface Props {
-  color?: TemplateKey;
+  color?: "main" | "secondary";
   children: ReactNode;
   href?: string;
   download?: boolean;
   onClick?: () => void;
+  className?: string;
+  type?: "button" | "submit";
+  arrow?: boolean;
+  disabled?: boolean;
 }
+
+const styles = {
+  main: "border border-accent bg-accent text-white hover:bg-[#1248c4]",
+  secondary:
+    "border border-line bg-transparent text-ink hover:border-ink hover:bg-card",
+};
 
 const Button = ({
   href,
@@ -15,27 +30,68 @@ const Button = ({
   children,
   download,
   onClick,
+  className = "",
+  type = "button",
+  arrow = false,
+  disabled = false,
 }: Props) => {
-  const styleTemplate: ITemplate = {
-    main:
-      "bg-primary border-primary text-light shadow-lg shadow-primary/25 hover:opacity-90",
-    secondary:
-      "bg-dark border-secondary/40 text-secondary hover:border-primary/60 hover:text-light",
-  };
+  const locale = useLocale();
+  const classes = `group inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium no-underline transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${styles[color]} ${className}`;
+
+  const content = (
+    <>
+      {children}
+      {arrow && (
+        <ArrowUpRight
+          size={16}
+          aria-hidden
+          className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+        />
+      )}
+    </>
+  );
+
+  if (href && download) {
+    return (
+      <a href={href} download className={classes} onClick={onClick}>
+        {content}
+      </a>
+    );
+  }
+
+  if (href?.startsWith("/")) {
+    return (
+      <Link href={withLang(href, locale)} className={classes} onClick={onClick}>
+        {content}
+      </Link>
+    );
+  }
+
+  if (href) {
+    const external = href.startsWith("http");
+    return (
+      <a
+        href={href}
+        className={classes}
+        onClick={onClick}
+        {...(external
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {})}
+      >
+        {content}
+      </a>
+    );
+  }
 
   return (
-    <a
+    <button
+      type={type}
       onClick={onClick}
-      href={href}
-      download={download}
-      className={`
-        no-underline border-2 rounded-xl px-4 py-2.5 text-sm md:text-base font-medium
-        transition-all duration-200 cursor-pointer
-        ${styleTemplate[color]}
-      `}
+      className={classes}
+      disabled={disabled}
     >
-      {children}
-    </a>
+      {content}
+    </button>
   );
 };
 

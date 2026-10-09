@@ -1,103 +1,121 @@
 "use client";
 
-import { MouseEvent, useState } from "react";
+import { MouseEvent, useEffect, useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import MobAlbum from "@/components/case/MobAlbum";
+import { useLocale } from "@/components/locale/LocaleProvider";
+import { getMessages } from "@/constants/messages";
 
 interface Props {
   album: string[];
+  alt: string;
 }
 
-const Album = ({ album }: Props) => {
+const Album = ({ album, alt }: Props) => {
+  const t = getMessages(useLocale());
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const reduce = useReducedMotion();
 
-  const openModal = (index: number) => setSelectedIndex(index);
   const closeModal = () => setSelectedIndex(null);
 
-  const showPrev = (e: MouseEvent) => {
-    e.stopPropagation();
+  const showPrev = (event?: MouseEvent) => {
+    event?.stopPropagation();
     setSelectedIndex((prev) =>
       prev !== null ? (prev - 1 + album.length) % album.length : null,
     );
   };
 
-  const showNext = (e: MouseEvent) => {
-    e.stopPropagation();
+  const showNext = (event?: MouseEvent) => {
+    event?.stopPropagation();
     setSelectedIndex((prev) =>
       prev !== null ? (prev + 1) % album.length : null,
     );
   };
 
+  useEffect(() => {
+    if (selectedIndex === null) return;
+
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSelectedIndex(null);
+      if (event.key === "ArrowLeft") {
+        setSelectedIndex((prev) =>
+          prev !== null ? (prev - 1 + album.length) % album.length : null,
+        );
+      }
+      if (event.key === "ArrowRight") {
+        setSelectedIndex((prev) =>
+          prev !== null ? (prev + 1) % album.length : null,
+        );
+      }
+    };
+
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [selectedIndex, album.length]);
+
+  if (album.length === 0) return null;
+
   return (
-    <div className="hidden xl:flex items-center mt-[200px] ml-[250px]">
-      {album
-        .slice(0, 10)
-        .map((picture, index) => (
-          <div
-            key={index}
-            className="mx-[-360px] relative w-[800px] h-[440px] perspective"
-            onClick={() => openModal(index)}
-          >
-            <div className="relative w-full h-full transform-style-preserve ml-[-40px] tilt">
-              <Image
-                src={picture}
-                fill
-                sizes="(max-width: 768px) 100vw, 800px"
-                alt={picture}
-                title={picture}
-                className="object-cover rounded-xl shadow-lg"
-              />
-            </div>
-          </div>
-        ))
-        .reverse()}
+    <div>
+      <MobAlbum album={album} alt={alt} onSelect={setSelectedIndex} />
 
       <AnimatePresence>
         {selectedIndex !== null && (
           <motion.div
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50"
-            initial={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-inverse/85 p-4"
+            initial={reduce ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closeModal}
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${alt} — ${t.caseStudy.gallery}`}
           >
             <button
+              type="button"
               onClick={closeModal}
-              className="absolute cursor-pointer top-6 right-6 text-white hover:text-gray-300 transition"
+              className="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full text-white"
+              aria-label={t.caseStudy.closeGallery}
             >
-              <X size={32} />
+              <X size={28} />
             </button>
 
             <button
+              type="button"
               onClick={showPrev}
-              className="absolute cursor-pointer left-8 text-white hover:text-gray-300 transition"
+              className="absolute left-3 grid h-11 w-11 place-items-center rounded-full text-white md:left-6"
+              aria-label={t.caseStudy.previous}
             >
-              <ChevronLeft size={48} />
+              <ChevronLeft size={36} />
             </button>
 
             <motion.div
               key={selectedIndex}
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="relative w-[80vw] h-[80vh]"
+              initial={reduce ? false : { opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="relative h-[80vh] w-[min(92vw,1100px)]"
+              onClick={(event) => event.stopPropagation()}
             >
               <Image
                 src={album[selectedIndex]}
                 fill
-                alt={`Image ${selectedIndex + 1}`}
-                className="object-contain rounded-xl shadow-2xl"
-                sizes="(max-width: 1024px) 100vw, 80vw"
+                alt={`${alt} screenshot ${selectedIndex + 1}`}
+                className="object-contain"
+                sizes="92vw"
               />
             </motion.div>
 
             <button
+              type="button"
               onClick={showNext}
-              className="absolute cursor-pointer right-8 text-white hover:text-gray-300 transition"
+              className="absolute right-3 grid h-11 w-11 place-items-center rounded-full text-white md:right-6"
+              aria-label={t.caseStudy.next}
             >
-              <ChevronRight size={48} />
+              <ChevronRight size={36} />
             </button>
           </motion.div>
         )}
