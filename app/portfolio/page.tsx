@@ -18,6 +18,7 @@ const PortfolioPage = () => {
   const handlePageClick = (event: { selected: number }) => {
     const start = event.selected * ITEMS_PER_PAGE;
     setCurrentItems(PORTFOLIO.slice(start, start + ITEMS_PER_PAGE));
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

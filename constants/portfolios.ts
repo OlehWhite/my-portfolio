@@ -31,7 +31,22 @@ export const PORTFOLIO: IPortfolio[] = [
       "Framer Motion",
       "Resend",
     ],
-    images: ["/portfolio/27Nerds/1.jpg"],
+    images: [
+      "/portfolio/27Nerds/1.jpg",
+      "/portfolio/27Nerds/2.jpg",
+      "/portfolio/27Nerds/3.jpg",
+      "/portfolio/27Nerds/4.jpg",
+      "/portfolio/27Nerds/5.jpg",
+      "/portfolio/27Nerds/6.jpg",
+      "/portfolio/27Nerds/7.jpg",
+      "/portfolio/27Nerds/8.jpg",
+      "/portfolio/27Nerds/9.jpg",
+      "/portfolio/27Nerds/10.jpg",
+      "/portfolio/27Nerds/11.jpg",
+      "/portfolio/27Nerds/12.jpg",
+      "/portfolio/27Nerds/13.jpg",
+    ],
+
     description: [
       "🚀 Project Overview",
       "Role: Front-end Developer",
