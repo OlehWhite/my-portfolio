@@ -2,6 +2,66 @@ import { IPortfolio } from "@/types/portfolio.types";
 
 export const PORTFOLIO: IPortfolio[] = [
   {
+    id: "27-nerds",
+    specialization: "Next",
+    image: "/portfolio/27Nerds/logo.png",
+    video: "",
+    link: "https://27n.gg/",
+    title: "High-End Corporate Website Development — Next.js | TypeScript",
+    shortDescription: [
+      "🚀 Role: Front-end Developer",
+      "⏱ Duration: ~220 hours",
+      "🛠 Tech Stack: Next.js, TypeScript, Tailwind CSS, Framer Motion, Resend",
+      "🎨 Based on: Figma Design",
+
+      "Process:",
+      "1. Pixel-Perfect Development from Figma across 20+ pages",
+      "2. Advanced scroll animations, parallax & micro-interactions",
+      "3. Reusable component architecture & shared section templates",
+      "4. Fully responsive layouts for desktop, tablet & mobile",
+      "5. SEO, performance optimization & Resend contact forms",
+
+      "💡 Outcome: A modern, high-performance corporate website with scalable architecture.",
+      "📩 Looking for a similar project? Send me an invite to my email.",
+    ],
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Resend",
+    ],
+    images: ["/portfolio/27Nerds/1.jpg"],
+    description: [
+      "🚀 Project Overview",
+      "Role: Front-end Developer",
+      "Duration: ~220 hours",
+      "Tech Stack: Next.js, TypeScript, Tailwind CSS, Framer Motion, Resend",
+      "Based on: Figma Design",
+
+      "Process",
+      "Pixel-Perfect Development: Built a fully responsive corporate website from Figma with careful attention to layout, typography, spacing, and design consistency across all pages.",
+      "Advanced Scroll Animations: Implemented numerous smooth scroll-based interactions, section transitions, parallax effects, animated counters, sticky elements, hover interactions, and micro-animations to create a premium user experience.",
+      "Component Architecture: Designed reusable UI components and shared section templates, allowing multiple pages to reuse the same building blocks while supporting different content structures.",
+      "Responsive Development: Optimized every page for desktop, tablet, and mobile devices, ensuring consistent rendering across different screen sizes.",
+      "Performance & SEO: Applied modern SEO best practices, semantic HTML, optimized images, metadata, lazy loading, and performance improvements to achieve fast loading times.",
+      "Forms & Email Integration: Integrated contact forms with Resend for reliable email delivery and implemented client-side validation for a smooth user experience.",
+      "Content Integration: Structured and integrated a large amount of dynamic project content, case studies, images, and reusable data models while maintaining scalability and ease of future updates.",
+
+      "💡 Key Challenges",
+      "Development of 20+ pages with reusable architecture.",
+      "Large number of custom animations and interactive sections.",
+      "Complex responsive layouts across multiple breakpoints.",
+      "High focus on performance without sacrificing animation quality.",
+      "Consistent implementation of reusable components for future scalability.",
+
+      "🏆 Outcome",
+      "Delivered a modern, high-performance corporate website with advanced animations, responsive layouts, SEO optimization, and scalable component architecture. The project combines smooth user interactions with clean code organization, making future maintenance and content expansion significantly easier.",
+
+      "📩 Let’s work together: Interested in high-end corporate web development? Send me an invite to my email and let’s start your project!",
+    ],
+  },
+  {
     id: "damka-systems",
     specialization: "React",
     image: "/portfolio/DamkaSestems/logo.png",
