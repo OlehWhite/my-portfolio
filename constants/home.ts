@@ -24,3 +24,14 @@ export const STACK = [
 ];
 
 export const FEATURED_IDS = ["27-nerds", "damka-systems", "tap-2-dine"];
+
+export const HERO_CASE_IDS = [
+  "27-nerds",
+  "damka-systems",
+  "tap-2-dine",
+  "pos",
+  "socal-living",
+  "digitalessentials",
+  "positiveresetservices",
+  "visual-property",
+];

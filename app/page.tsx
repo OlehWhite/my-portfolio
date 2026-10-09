@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import MainLayout from "@/layouts/MainLayout";
-import { FEATURED_IDS, STACK } from "@/constants/home";
+import { FEATURED_IDS, HERO_CASE_IDS, STACK } from "@/constants/home";
 import { PORTFOLIO } from "@/constants/portfolios";
 import { SITE } from "@/constants/site";
 import { getMessages } from "@/constants/messages";
@@ -41,6 +41,23 @@ const HomePage = async () => {
     const project = PORTFOLIO.find((item) => item.id === id);
     return project ? [localizeProject(project, locale)] : [];
   });
+  const heroCases = HERO_CASE_IDS.flatMap((id) => {
+    const project = PORTFOLIO.find((item) => item.id === id);
+    if (!project || project.specialization === "Webflow") return [];
+
+    const localized = localizeProject(project, locale);
+    const image = localized.images[0];
+    if (!image) return [];
+
+    return [
+      {
+        id: localized.id,
+        title: localized.title,
+        image,
+        href: withLang(`/portfolio/${localized.id}`, locale),
+      },
+    ];
+  });
 
   return (
     <MainLayout>
@@ -76,13 +93,7 @@ const HomePage = async () => {
             </a>
           </div>
         </div>
-        <HeroVisual
-          labels={{
-            corporate: t.hero.shots.corporate,
-            admin: t.hero.shots.admin,
-            tap: t.hero.shots.tap,
-          }}
-        />
+        <HeroVisual cases={heroCases} />
       </section>
 
       <section className="mt-16 border-t border-line pt-8 md:mt-20">

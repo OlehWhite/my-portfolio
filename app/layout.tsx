@@ -6,6 +6,7 @@ import { SITE } from "@/constants/site";
 import { getMessages } from "@/constants/messages";
 import { htmlLang } from "@/lib/locale";
 import { getLocale } from "@/lib/request-locale";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +38,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   return (
     <html lang={htmlLang(locale)}>
       <body className={`${geistSans.variable} font-sans antialiased`}>
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
