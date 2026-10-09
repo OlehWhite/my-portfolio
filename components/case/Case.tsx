@@ -16,13 +16,19 @@ const Case = ({ project }: Props) => {
             <video
               className="w-full"
               src={project.video}
-              controls
+              autoPlay
+              muted
+              loop
               playsInline
               preload="metadata"
               poster={project.images?.[0]}
             />
           ) : (
-            <div className="w-full aspect-video rounded-lg bg-secondary/20" />
+            <img
+              className="w-full rounded-lg"
+              src={project.images[0]}
+              alt={project.title}
+            />
           )}
 
           <div className="flex flex-wrap gap-3">
