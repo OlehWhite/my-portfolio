@@ -32,7 +32,7 @@ export const PORTFOLIO: IPortfolio[] = [
       "Resend",
     ],
     images: [
-      "/portfolio/27Nerds/1.png",
+      "/portfolio/27Nerds/1.jpg",
       "/portfolio/27Nerds/2.png",
       "/portfolio/27Nerds/3.png",
       "/portfolio/27Nerds/4.png",
